@@ -10,7 +10,7 @@ const navBar = () => {
   const [activeIndex, setActiveIndex] = useState(3);
 
   return (
-    <div className='flex justify-between px-[80px]  bg-black/60 py-5'>
+    <div className='flex justify-between px-[80px]  bg-black/90 py-5'>
 
 
       <div>

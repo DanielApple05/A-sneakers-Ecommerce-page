@@ -5,7 +5,7 @@ import bgHero from '../assets/images/female-imgfolder/nike-F4.png';
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <div className="sticky top-0 shadow z-50">
+      <div className="sticky top-0 shadow-xl z-50">
         <Header />
       </div>
       <section className="relative h-[90vh]">
