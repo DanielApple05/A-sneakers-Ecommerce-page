@@ -7,7 +7,7 @@ import { faCartShopping, faCircleUser } from "@fortawesome/free-solid-svg-icons"
 
 const navBar = () => {
 
-  const [activeIndex, setActiveIndex] = useState();
+  const [activeIndex, setActiveIndex] = useState(3);
 
   return (
     <div className='flex justify-between px-[80px] bg-gray-400'>
