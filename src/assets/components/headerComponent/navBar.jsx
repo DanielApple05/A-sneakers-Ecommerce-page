@@ -10,18 +10,18 @@ const navBar = () => {
   const [activeIndex, setActiveIndex] = useState(3);
 
   return (
-    <div className='flex justify-between px-[80px]'>
+    <div className='flex justify-between px-[80px]  bg-black/60 py-5'>
 
 
       <div>
-        <img src={SneakIcon} alt="" className='w-[120px]' />
+        <img src={SneakIcon} alt="" className=' bg-gray-400/50 w-[120px] rounded-xl' />
       </div>
 
       <div className=' space-x-[50px] flex '>
 
         {
           NavBtns.map((NavBtns, index) => (
-            <button key={index} className={`cursor-pointer font-bold ${activeIndex === index
+            <button key={index} className={`cursor-pointer font-bold text-gray-400 ${activeIndex === index
               ? "border-b-2 border-white hover:border-b-white "
               : "border-b-2 border-transparent"
               }` }>
@@ -32,7 +32,7 @@ const navBar = () => {
           ))
         }
       </div>
-      <div className='flex place-content-center gap-[20px]'>
+      <div className='text-gray-400 flex place-content-center gap-[20px]'>
        <button>
         <FontAwesomeIcon icon={ faCartShopping } className='text-[20px]' />
        </button>

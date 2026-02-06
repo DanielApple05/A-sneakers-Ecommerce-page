@@ -7,7 +7,7 @@ const Sneakers = {
       name: "Adidas Ultraboost 22",
       price: 180,
       gender: "male",
-      image: "/images/adidas/ultraboost.jpg",
+      image: "../src/images/male-imgfolder/addidas1-m-b.png",
       category: "running",
     },
     {
