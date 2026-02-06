@@ -3,7 +3,7 @@ import { useState } from 'react';
 import NavBtns from './navTabs';
 import SneakIcon from '../../images/sneakShop-icon.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faCircleUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const navBar = () => {
 
@@ -32,7 +32,10 @@ const navBar = () => {
           ))
         }
       </div>
-      <div className='text-gray-400 flex place-content-center gap-[20px]'>
+      <div className='text-gray-400 flex place-content-center gap-[30px]'>
+        <button>
+  <FontAwesomeIcon icon={ faMagnifyingGlass } className='text-[20px]' />
+        </button>
        <button>
         <FontAwesomeIcon icon={ faCartShopping } className='text-[20px]' />
        </button>

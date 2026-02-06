@@ -5,9 +5,11 @@ import '../App.css'
 import Addidas from '../assets/images/male-imgfolder/addidas1-m-b.png'
 import Addidas_2_f from '../assets/images/female-imgfolder/addidas2-f.png';
 import Nike_1 from '../assets/images/female-imgfolder/nike-f2.png';
-import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png'
-import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png'
-import Nike_2_f from '../assets/images/female-imgfolder/nike-f1.png'
+import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png';
+import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
+import Nike_2_f from '../assets/images/female-imgfolder/nike-f1.png';
+
+
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -117,24 +119,39 @@ const Index = () => {
           <div className='w-[50%] relative'>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
 
-            <div  className="absolute top-15 left-10 text-white text-lg font-semibold space-y-2 tracking-widest">
+            <div className="absolute top-15 left-10 text-white text-lg font-semibold space-y-2 tracking-widest">
               <p >
-                Men's Collection 
+                Men's Collection
               </p>
               <p>
-                  UP TO 40% OFF
+                UP TO 40% OFF
               </p>
 
-              <button className='Shop-Men bg-red-600 px-8 rounded-2xl py-2 mt-4 '>
-Shop Men 
+              <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 '>
+                Shop Men
               </button>
 
             </div>
 
           </div>
 
-          <div className='w-[50%]'>
+          <div className='w-[50%] relative'>
             <img src={Nike_2_f} alt="" className="w-full h-full object-cover" />
+
+            <div className="absolute top-15 left-10 text-lg font-semibold space-y-2 tracking-widest">
+              <p >
+                Women's Collection
+              </p>
+              <p>
+                NEW ARRIVALS
+              </p>
+
+              <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 text-white '>
+                Shop Women
+              </button>
+
+            </div>
+
           </div>
         </div>
 
