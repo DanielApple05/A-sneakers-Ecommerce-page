@@ -40,11 +40,11 @@ const Index = () => {
         </h1>
         <div className='flex w-[100%] gap-10 mt-[20px]'>
 
-          <div className='w-[25%] bg-orange-200 grid'>
-            <div >
-              <img src={Addidas} alt="" />
+          <div className='w-[25%] bg-orange-200 grid rounded-xl'>
+            <div  >
+              <img src={Addidas} alt="" className='rounded-t-xl'/>
             </div>
-            <div className='grid  justify-center text-center bg-white pt-2'>
+            <div className='grid  justify-center text-center pt-2'>
               <h3>
                 Air Max 270
               </h3>
@@ -57,11 +57,11 @@ const Index = () => {
             </button>
           </div>
 
-          <div className='w-[25%] grid'>
+          <div className='w-[25%] grid bg-orange-200 rounded-xl'>
             <div >
-              <img src={Nike_1} alt="" />
+              <img src={Nike_1} alt="" className='rounded-t-xl'/>
             </div>
-            <div className='grid  justify-center text-center'>
+            <div className='grid justify-center text-center'>
               <h3>
                 Air Max 270
               </h3>
@@ -75,9 +75,9 @@ const Index = () => {
             </button>
           </div>
 
-          <div className='w-[25%] grid'>
+          <div className='w-[25%] grid bg-orange-200 rounded-xl'>
             <div >
-              <img src={Addidas_2_f} alt="" />
+              <img src={Addidas_2_f} alt="" className='rounded-t-xl'/>
             </div>
             <div className='grid  justify-center text-center'>
               <h3>
@@ -92,9 +92,9 @@ const Index = () => {
             </button>
           </div>
 
-          <div className='w-[25%] grid'>
+          <div className='w-[25%] grid bg-orange-200 rounded-xl'>
             <div >
-              <img src={Jordans_1} alt="" />
+              <img src={Jordans_1} alt="" className='rounded-t-xl' />
             </div>
             <div className='grid  justify-center text-center'>
               <h3>
@@ -109,6 +109,12 @@ const Index = () => {
             </button>
           </div>
 
+        </div>
+
+        <div>
+          <div>
+            
+          </div>
         </div>
 
       </div>
