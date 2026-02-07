@@ -47,7 +47,7 @@ const FooterNavs = () => {
             <div className="flex gap-x-3 " >
               {
                 FtNavBtns.cards.map((card, index) => (
-                  <img key={card} src={card} alt="" className="w-[100px] h-[50px] bg-white rounded cursor-pointer"/>
+                  <img key={card} src={card} alt="" className="w-[100px] h-[50px] bg-white rounded cursor-pointer" />
                 ))
               }
             </div>
@@ -57,14 +57,21 @@ const FooterNavs = () => {
 
       </div>
 
-     <div>
-       <div className="px-[80px] tracking-widest] py-4" >
-        <h3>2026 <span className="text-red-400">SneakerShop.</span> All Rights Reserved</h3>
+      <div className="flex justify-between px-[80px]  py-4 items-center">
+        <div className=" tracking-widest]" >
+          <h3>2026 <span className="text-red-400">SneakerShop.</span> All Rights Reserved</h3>
+        </div>
+
+        <div className="flex gap-x-18  ">
+          {
+            FtNavBtns.brandIcon.map((brand) => (
+              <img key={brand} src={brand} alt="" className="w-20 rounded"/>
+
+            ))
+          }
+        </div>
+
       </div>
-
-
-
-     </div>
 
     </div>
   );

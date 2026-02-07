@@ -14,7 +14,7 @@ const navBar = () => {
 
 
       <div className='flex items-center'>
-        <img src={SneakIcon} alt="" className=' bg-gray-400/50 w-[120px] rounded-xl' />
+        <img src={SneakIcon} alt="" className='  w-[120px] rounded-xl' />
       </div>
 
       <div className=' space-x-[50px] flex  '>

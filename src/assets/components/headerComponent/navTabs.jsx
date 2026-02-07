@@ -4,7 +4,7 @@ const navTabs =  [
 
 { tab: "Home"},
 { tab: "Shop"},
-{ tab: "About"},
+{ tab: "Brands"},
 { tab: "contact us"},
 { tab: "Blog"},
 
