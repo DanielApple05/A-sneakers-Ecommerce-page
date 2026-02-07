@@ -5,6 +5,11 @@ import {
   faInstagramSquare, 
   faYoutubeSquare 
 } from "@fortawesome/free-brands-svg-icons";
+import visaPay from '../../images/visa-icon.png';
+import masterPay from '../../images/mastercard-icon.png';
+import ex_Pay from '../../images/american-EX-icon.png';
+import applePAy from '../../images/applePay-icon.png';
+import payPal from '../../images/paypal-icon.png'
 
 const footerTab = {
   links: [
@@ -24,7 +29,15 @@ const footerTab = {
     faTwitterSquare,
     faInstagramSquare,
     faYoutubeSquare,
+  ],
+  cards: [
+      visaPay,
+       masterPay,
+       ex_Pay,
+       applePAy,
+       payPal,
   ]
+
 };
 
 export default footerTab;

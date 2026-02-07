@@ -27,17 +27,26 @@ const FooterNavs = () => {
             </div>
           </div>
 
-          <div>
+          <div className="">
             <h3>
               Subscribe To Our Newsletter
             </h3>
-            <div className="flex bg-white">
+            <div className="flex bg-white w-full mb-5 mt-2">
               <input type="email" placeholder="Email address" className="py-3 px-2 border" />
               <button className="bg-red-700 px-3 tracking-widest py-3 font-semibold">
                 Subscribe
               </button>
+            </div> 
+
+            <div className="flex gap-x-3 " >
+              { 
+                FtNavBtns.cards.map((card, index) => (
+                  <img key={card} src={card} alt="" className="w-[50px] h-[50px] bg-white "/>
+                ))
+              }
             </div>
           </div>
+
         </div>
 
       </div>
