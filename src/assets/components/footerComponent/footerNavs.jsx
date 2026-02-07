@@ -47,7 +47,7 @@ const FooterNavs = () => {
             <div className="flex gap-x-3 " >
               {
                 FtNavBtns.cards.map((card, index) => (
-                  <img key={card} src={card} alt="" className="w-[100px] h-[50px] bg-white rounded " />
+                  <img key={card} src={card} alt="" className="w-[100px] h-[50px] bg-white rounded cursor-pointer"/>
                 ))
               }
             </div>

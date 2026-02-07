@@ -7,23 +7,23 @@ import { faCartShopping, faCircleUser, faMagnifyingGlass } from "@fortawesome/fr
 
 const navBar = () => {
 
-  const [activeIndex, setActiveIndex] = useState(3);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className='flex justify-between px-[80px]  bg-black/90 py-5'>
+    <div className='flex justify-between  px-[80px]  bg-black/90 min-h-30'>
 
 
-      <div>
+      <div className='flex items-center'>
         <img src={SneakIcon} alt="" className=' bg-gray-400/50 w-[120px] rounded-xl' />
       </div>
 
-      <div className=' space-x-[50px] flex '>
+      <div className=' space-x-[50px] flex  '>
 
         {
           NavBtns.map((NavBtns, index) => (
-            <button key={index} className={`cursor-pointer font-bold text-gray-400 ${activeIndex === index
-              ? "border-b-2 border-white hover:border-b-white "
-              : "border-b-2 border-transparent"
+            <button key={index} onClick={() => setActiveIndex(index)} className={`cursor-pointer font-bold text-gray-400 hover:text-white transition  ${activeIndex === index
+              ? "border-b-2 border-white transition text-white"
+              : ""
               }` }>
               {
                 NavBtns.tab
@@ -32,15 +32,15 @@ const navBar = () => {
           ))
         }
       </div>
-      <div className='text-gray-400 flex place-content-center gap-[30px]'>
+      <div className='text-gray-400 flex gap-[30px] '>
         <button>
-  <FontAwesomeIcon icon={ faMagnifyingGlass } className='text-[20px]' />
+  <FontAwesomeIcon icon={ faMagnifyingGlass } className='text-[20px] cursor-pointer hover:text-white transition' />
         </button>
        <button>
-        <FontAwesomeIcon icon={ faCartShopping } className='text-[20px]' />
+        <FontAwesomeIcon icon={ faCartShopping } className='text-[20px] cursor-pointer hover:text-white transition' />
        </button>
        <button>
-        <FontAwesomeIcon icon={ faCircleUser } className='text-[20px]' />
+        <FontAwesomeIcon icon={ faCircleUser } className='text-[20px] cursor-pointer hover:text-white transition ' />
        </button>
       </div>
 
