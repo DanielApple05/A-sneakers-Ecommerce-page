@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './header';
-import bgHero from '../assets/images/female-imgfolder/nike-F4.png';
+import Header from './components/headerComponent/header';
+import bgHero from '../assets/images/background-hero.png';
 import '../App.css'
 import Addidas from '../assets/images/male-imgfolder/addidas1-m-b.png'
 import Addidas_2_f from '../assets/images/female-imgfolder/addidas2-f.png';
 import Nike_1 from '../assets/images/female-imgfolder/nike-f2.png';
 import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png';
 import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
-import Nike_2_f from '../assets/images/female-imgfolder/nike-f1.png';
+import Jordans_f from '../assets/images/female-imgfolder/jordans-f.png';
 
 
 const Index = () => {
@@ -136,9 +136,9 @@ const Index = () => {
           </div>
 
           <div className='w-[50%] relative'>
-            <img src={Nike_2_f} alt="" className="w-full h-full object-cover" />
+            <img src={Jordans_f} alt="" className="w-full h-full object-cover" />
 
-            <div className="absolute top-15 left-10 text-lg font-semibold space-y-2 tracking-widest">
+            <div className="absolute top-15 left-10 text-lg font-semibold space-y-2 text-white tracking-widest">
               <p >
                 Women's Collection
               </p>
@@ -146,7 +146,7 @@ const Index = () => {
                 NEW ARRIVALS
               </p>
 
-              <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 text-white '>
+              <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 '>
                 Shop Women
               </button>
 
