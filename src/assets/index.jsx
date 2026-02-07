@@ -8,6 +8,7 @@ import Nike_1 from '../assets/images/female-imgfolder/nike-f2.png';
 import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png';
 import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
 import Jordans_f from '../assets/images/female-imgfolder/jordans-f.png';
+import Footer from './components/footerComponent/footer'
 
 
 const Index = () => {
@@ -156,7 +157,7 @@ const Index = () => {
         </div>
 
       </div>
-
+      <Footer></Footer>
     </div>
   );
 };
