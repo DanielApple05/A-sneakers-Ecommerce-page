@@ -1,18 +1,30 @@
-import React from 'react';
+// footerTab.jsx
+import { 
+  faFacebookSquare, 
+  faTwitterSquare, 
+  faInstagramSquare, 
+  faYoutubeSquare 
+} from "@fortawesome/free-brands-svg-icons";
 
-const footerTab =[
+const footerTab = {
+  links: [
+    "Customer Service",
+    "Contact Us",
+    "Shipping Info",
+    "Returns & Exchanges",
+    "FAQs",
+    "About Us",
+    "Our Story",
+    "Careers",
+    "Privacy Policies",
+    "Terms & Conditions",
+  ],
+  socials: [
+    faFacebookSquare,
+    faTwitterSquare,
+    faInstagramSquare,
+    faYoutubeSquare,
+  ]
+};
 
-  {footTab: "Customer service" },
-  {footTab: " Contact Us" },
-  {footTab: " Shipping Info" },
-  {footTab: "Returns & Exchanges" },
-  {footTab: " FAQs" },
-  {footTab: "About Us" },
-  {footTab: "Our Story" },
-  {footTab: "Careers" },
-  {footTab: "Privacy Policies" },
-  {footTab: "Terms & Conditions" },
-
-]
-
-export default footerTab
+export default footerTab;
