@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/headerComponent/header';
+import Header from '../assets/components/headerComponent/header';
 import bgHero from '../assets/images/background-hero.png';
 import '../App.css';
 import Addidas from '../assets/images/male-imgfolder/addidas1-m-b.png'
@@ -8,7 +8,7 @@ import Nike_1 from '../assets/images/female-imgfolder/nike-f1.png';
 import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png';
 import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
 import Jordans_f from '../assets/images/female-imgfolder/female-airforce.png';
-import Footer from './components/footerComponent/footer'
+import Footer from '../assets/components/footerComponent/footer'
 
 
 const Index = () => {
