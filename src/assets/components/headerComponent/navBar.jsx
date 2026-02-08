@@ -10,14 +10,14 @@ const navBar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className='flex justify-between  px-[80px]  bg-black/90 min-h-30'>
+    <div className='flex justify-between  px-20  bg-black/90 min-h-30'>
 
 
       <div className='flex items-center'>
-        <img src={SneakIcon} alt="" className='  w-[120px] rounded-xl' />
+        <img src={SneakIcon} alt="" className='  w-30 rounded-xl' />
       </div>
 
-      <div className=' space-x-[50px] flex  '>
+      <div className=' space-x-12.5 flex  '>
 
         {
           NavBtns.map((NavBtns, index) => (
@@ -32,7 +32,7 @@ const navBar = () => {
           ))
         }
       </div>
-      <div className="text-gray-400 flex gap-[30px]">
+      <div className="text-gray-400 flex gap-7.5">
         <button>
   <FontAwesomeIcon icon={ faMagnifyingGlass } className='text-[25px] cursor-pointer hover:text-white transition' />
         </button>

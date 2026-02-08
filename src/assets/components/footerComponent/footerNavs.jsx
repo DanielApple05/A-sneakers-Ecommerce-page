@@ -5,9 +5,9 @@ import FtNavBtns from "./footerTab";
 const FooterNavs = () => {
   return (
 
-    <div className="bg-zinc-900 py-[50px] text-gray-400 ">
+    <div className="bg-zinc-900 py-12.5 text-gray-400 ">
       <div className="border-b " >
-        <div className=" flex justify-between px-[80px] pb-15">
+        <div className=" flex justify-between px-20 pb-15">
 
           <div className="grid grid-cols-2 gap-y-6 gap-x-15">
             {FtNavBtns.links.map((link, index) => (
@@ -47,7 +47,7 @@ const FooterNavs = () => {
             <div className="flex gap-x-3 " >
               {
                 FtNavBtns.cards.map((card, index) => (
-                  <img key={card} src={card} alt="" className="w-[100px] h-[50px] bg-white rounded cursor-pointer" />
+                  <img key={card} src={card} alt="" className="w-24 h-12.5 bg-white rounded cursor-pointer" />
                 ))
               }
             </div>
@@ -57,7 +57,7 @@ const FooterNavs = () => {
 
       </div>
 
-      <div className="flex justify-between px-[80px]  py-4 items-center">
+      <div className="flex justify-between px-20  py-4 items-center">
         <div className=" tracking-widest]" >
           <h3>2026 <span className="text-red-400">SneakerShop.</span> All Rights Reserved</h3>
         </div>

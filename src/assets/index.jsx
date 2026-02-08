@@ -23,7 +23,7 @@ const Index = () => {
           style={{ backgroundImage: `url(${bgHero})` }}
         />
         <div />
-        <div className="relative z-10  space-y-5 text-white px-[80px] py-[180px]">
+        <div className="relative z-10  space-y-5 text-white px-20 py-45">
           <h5 className='text-4xl font-bold'>
             Latest Collection
           </h5>
@@ -39,11 +39,11 @@ const Index = () => {
         </div>
       </section>
 
-      <div className='bg-white px-[80px] py-[40px]'>
+      <div className='bg-white px-20 py-40'>
         <h1 className='font-bold text-xl'>
           Best Sellers
         </h1>
-        <div className='flex w-[100%] gap-10 mt-[20px]'>
+        <div className='flex w-full gap-10 mt-4'>
 
           <div className='w-[25%] bg-gray-400 grid rounded-xl'>
             <div  >
@@ -116,7 +116,7 @@ const Index = () => {
 
         </div>
 
-        <div className='flex w-[100%] justify-between  my-[40px] gap-10 h-100'>
+        <div className='flex w-full justify-between  my-10 gap-10 h-100'>
           <div className='w-[50%] relative'>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
 

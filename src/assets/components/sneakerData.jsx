@@ -1,4 +1,4 @@
-// sneakerData.js
+
 
 const Sneakers = [
     {
@@ -67,7 +67,7 @@ const Sneakers = [
       gender: "male",
       image: "/images/nike/airforce1.jpg",
       category: "lifestyle",
-      brands: "nikeAirforce",
+      brand: "nikeAirforce",
     },
     {
       id: "airforce-2",
@@ -76,7 +76,7 @@ const Sneakers = [
       gender: "female",
       image: "/images/nike/airforce-shadow.jpg",
       category: "lifestyle",
-      brands: "nikeAirforce",
+      brand: "nikeAirforce",
     },
     {
       id: "airforce-3",
@@ -85,7 +85,7 @@ const Sneakers = [
       gender: "male",
       image: "/images/nike/airforce07.jpg",
       category: "casual",
-      brands: "nikeAirforce",
+      brand: "nikeAirforce",
     },
 ];
 
