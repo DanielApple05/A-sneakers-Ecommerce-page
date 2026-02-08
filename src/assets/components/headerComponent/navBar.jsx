@@ -32,15 +32,15 @@ const navBar = () => {
           ))
         }
       </div>
-      <div className='text-gray-400 flex gap-[30px] '>
+      <div className="text-gray-400 flex gap-[30px]">
         <button>
-  <FontAwesomeIcon icon={ faMagnifyingGlass } className='text-[20px] cursor-pointer hover:text-white transition' />
+  <FontAwesomeIcon icon={ faMagnifyingGlass } className='text-[25px] cursor-pointer hover:text-white transition' />
         </button>
        <button>
-        <FontAwesomeIcon icon={ faCartShopping } className='text-[20px] cursor-pointer hover:text-white transition' />
+        <FontAwesomeIcon icon={ faCartShopping } className='text-[25px] cursor-pointer hover:text-white transition' />
        </button>
        <button>
-        <FontAwesomeIcon icon={ faCircleUser } className='text-[20px] cursor-pointer hover:text-white transition ' />
+        <FontAwesomeIcon icon={ faCircleUser } className='text-[30px] cursor-pointer hover:text-white transition ' />
        </button>
       </div>
 

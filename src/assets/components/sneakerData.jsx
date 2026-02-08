@@ -1,14 +1,19 @@
 // sneakerData.js
 
-const Sneakers = {
-  adidas: [
+const Sneakers = [
     {
       id: "adidas-1",
       name: "Adidas Ultraboost 22",
+      description: "jhdj",
       price: 180,
+      currency: "$",
       gender: "male",
       image: "../src/images/male-imgfolder/addidas1-m-b.png",
       category: "running",
+      brand: "adidas",
+      imageThumbnails: [
+        'side', 'freont'
+      ]
     },
     {
       id: "adidas-2",
@@ -17,6 +22,7 @@ const Sneakers = {
       gender: "female",
       image: "/images/adidas/forum-low.jpg",
       category: "lifestyle",
+      brand: "adidas",
     },
     {
       id: "adidas-3",
@@ -25,10 +31,8 @@ const Sneakers = {
       gender: "male",
       image: "/images/adidas/nmd.jpg",
       category: "casual",
+      brand: "adidas",
     },
-  ],
-
-  jordans: [
     {
       id: "jordan-1",
       name: "Air Jordan 1 Retro High",
@@ -36,6 +40,7 @@ const Sneakers = {
       gender: "male",
       image: "/images/jordans/jordan1.jpg",
       category: "basketball",
+      brand: "jordans",
     },
     {
       id: "jordan-2",
@@ -44,6 +49,7 @@ const Sneakers = {
       gender: "female",
       image: "/images/jordans/jordan4.jpg",
       category: "basketball",
+      brand: "jordans",
     },
     {
       id: "jordan-3",
@@ -52,10 +58,8 @@ const Sneakers = {
       gender: "male",
       image: "/images/jordans/delta.jpg",
       category: "lifestyle",
+      brand: "jordans",
     },
-  ],
-
-  nikeAirforce: [
     {
       id: "airforce-1",
       name: "Nike Air Force 1 Low",
@@ -63,6 +67,7 @@ const Sneakers = {
       gender: "male",
       image: "/images/nike/airforce1.jpg",
       category: "lifestyle",
+      brands: "nikeAirforce",
     },
     {
       id: "airforce-2",
@@ -71,6 +76,7 @@ const Sneakers = {
       gender: "female",
       image: "/images/nike/airforce-shadow.jpg",
       category: "lifestyle",
+      brands: "nikeAirforce",
     },
     {
       id: "airforce-3",
@@ -79,23 +85,9 @@ const Sneakers = {
       gender: "male",
       image: "/images/nike/airforce07.jpg",
       category: "casual",
+      brands: "nikeAirforce",
     },
-  ],
-};
+];
 
 export default Sneakers;
-
-
-// Gender filters
-export const maleSneakers = [
-  ...Sneakers.adidas.filter(item => item.gender === "male"),
-  ...Sneakers.jordans.filter(item => item.gender === "male"),
-  ...Sneakers.nikeAirforce.filter(item => item.gender === "male"),
-];
-
-export const femaleSneakers = [
-  ...Sneakers.adidas.filter(item => item.gender === "female"),
-  ...Sneakers.jordans.filter(item => item.gender === "female"),
-  ...Sneakers.nikeAirforce.filter(item => item.gender === "female"),
-];
 
