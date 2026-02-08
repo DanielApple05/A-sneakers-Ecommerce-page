@@ -4,10 +4,10 @@ import bgHero from '../assets/images/background-hero.png';
 import '../App.css'
 import Addidas from '../assets/images/male-imgfolder/addidas1-m-b.png'
 import Addidas_2_f from '../assets/images/female-imgfolder/addidas2-f.png';
-import Nike_1 from '../assets/images/female-imgfolder/nike-f2.png';
+import Nike_1 from '../assets/images/female-imgfolder/nike-f1.png';
 import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png';
 import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
-import Jordans_f from '../assets/images/female-imgfolder/jordans-f.png';
+import Jordans_f from '../assets/images/female-imgfolder/female-airforce.png';
 import Footer from './components/footerComponent/footer'
 
 
@@ -45,7 +45,7 @@ const Index = () => {
         </h1>
         <div className='flex w-[100%] gap-10 mt-[20px]'>
 
-          <div className='w-[25%] bg-orange-200 grid rounded-xl'>
+          <div className='w-[25%] bg-gray-400 grid rounded-xl'>
             <div  >
               <img src={Addidas} alt="" className='rounded-t-xl' />
             </div>
@@ -57,12 +57,12 @@ const Index = () => {
                 $150
               </p>
             </div>
-            <button className='bg-blue-600 text-white font-bold p-3 m-5 rounded-xl'>
+            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
               Add to Cart
             </button>
           </div>
 
-          <div className='w-[25%] grid bg-orange-200 rounded-xl'>
+          <div className='w-[25%] grid bg-gray-400 rounded-xl'>
             <div >
               <img src={Nike_1} alt="" className='rounded-t-xl' />
             </div>
@@ -75,12 +75,12 @@ const Index = () => {
               </p>
 
             </div>
-            <button className='bg-blue-600 text-white font-bold p-3 m-5 rounded-xl'>
+            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
               Add to Cart
             </button>
           </div>
 
-          <div className='w-[25%] grid bg-orange-200 rounded-xl'>
+          <div className='w-[25%] grid bg-gray-400 rounded-xl'>
             <div >
               <img src={Addidas_2_f} alt="" className='rounded-t-xl' />
             </div>
@@ -92,12 +92,12 @@ const Index = () => {
                 $150
               </p>
             </div>
-            <button className='bg-blue-600 text-white font-bold p-3 m-5 rounded-xl'>
+            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
               Add to Cart
             </button>
           </div>
 
-          <div className='w-[25%] grid bg-orange-200 rounded-xl'>
+          <div className='w-[25%] grid bg-gray-400 rounded-xl'>
             <div >
               <img src={Jordans_1} alt="" className='rounded-t-xl' />
             </div>
@@ -109,7 +109,7 @@ const Index = () => {
                 $150
               </p>
             </div>
-            <button className='bg-blue-600 text-white font-bold p-3 m-5 rounded-xl'>
+            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
               Add to Cart
             </button>
           </div>
@@ -120,7 +120,7 @@ const Index = () => {
           <div className='w-[50%] relative'>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
 
-            <div className="absolute top-15 left-10 text-white text-lg font-semibold space-y-2 tracking-widest">
+            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2 tracking-widest">
               <p >
                 Men's Collection
               </p>
@@ -139,7 +139,7 @@ const Index = () => {
           <div className='w-[50%] relative'>
             <img src={Jordans_f} alt="" className="w-full h-full object-cover" />
 
-            <div className="absolute top-15 left-10 text-lg font-semibold space-y-2 text-white tracking-widest">
+            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2  tracking-widest">
               <p >
                 Women's Collection
               </p>
