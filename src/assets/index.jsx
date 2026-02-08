@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/headerComponent/header';
 import bgHero from '../assets/images/background-hero.png';
-import '../App.css'
+import '../App.css';
 import Addidas from '../assets/images/male-imgfolder/addidas1-m-b.png'
 import Addidas_2_f from '../assets/images/female-imgfolder/addidas2-f.png';
 import Nike_1 from '../assets/images/female-imgfolder/nike-f1.png';
