@@ -2,18 +2,15 @@ import React from 'react';
 import Header from '../assets/components/headerComponent/header';
 import bgHero from '../assets/images/background-hero.png';
 import '../App.css';
-import Jordans_m from '../assets/images/male-imgfolder/male-jordans-g.png';
-import JordansF from '../assets/images/female-imgfolder/jordansF.png';
-import Nike_1 from '../assets/images/female-imgfolder/nike-f1.png';
-import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png';
 import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
 import Jordans_f from '../assets/images/female-imgfolder/female-airforce.png';
 import Footer from '../assets/components/footerComponent/footer'
+import Sneaker from '../assets/components/sneakerData';
 
 
 const Index = () => {
 
-  const indexSneakers = [  ]
+  const sneaker = [Sneaker[(0)], Sneaker[(7)], Sneaker[(8)], Sneaker[3] ]
   return (
     <div className="min-h-screen">
       <div className="sticky top-0 shadow-xl z-50">
@@ -45,77 +42,25 @@ const Index = () => {
         <h1 className='font-bold text-xl'>
           Best Sellers
         </h1>
-        <div className='flex w-full gap-10 mt-4'>
+        <div className='flex w-full gap-10 mt-4'>      
+            {sneaker.map((shoe) => (
+              <div key={shoe.id} className="w-[25%] bg-gray-400 grid rounded-xl">
 
-          <div className='w-[25%] bg-gray-400 grid rounded-xl'>
-            <div  >
-              <img src={Jordans_m} alt="" className='rounded-t-xl' />
-            </div>
-            <div className='grid  justify-center text-center pt-2'>
-              <h3>
-                Air Max 270
-              </h3>
-              <p>
-                $150
-              </p>
-            </div>
-            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
-              Add to Cart
-            </button>
-          </div>
+                <div>
+                  <img src={shoe.image} alt={shoe.name} className="rounded-t-xl h-full " />
+                </div>
 
-          <div className='w-[25%] grid bg-gray-400 rounded-xl'>
-            <div >
-              <img src={Nike_1} alt="" className='rounded-t-xl' />
-            </div>
-            <div className='grid justify-center text-center'>
-              <h3>
-                Air Max 270
-              </h3>
-              <p>
-                $150
-              </p>
+                <div className="grid justify-center text-center pt-2">
+                  <h3 className='font-semibold'>{shoe.name}</h3>
+                  <p className='text-[18px]'>${shoe.price}</p>
+                </div>
 
-            </div>
-            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
-              Add to Cart
-            </button>
-          </div>
+                <button className="bg-blue-400 text-white font-bold p-3 m-5 rounded-xl hover:bg-blue-600 cursor-pointer">
+                  Add to Cart
+                </button>
 
-          <div className='w-[25%] grid bg-gray-400 rounded-xl'>
-            <div >
-              <img src={JordansF} alt="" className='rounded-t-xl' />
-            </div>
-            <div className='grid  justify-center text-center'>
-              <h3>
-                Air Max 270
-              </h3>
-              <p>
-                $150
-              </p>
-            </div>
-            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
-              Add to Cart
-            </button>
-          </div>
-
-          <div className='w-[25%] grid bg-gray-400 rounded-xl'>
-            <div >
-              <img src={Jordans_1} alt="" className='rounded-t-xl' />
-            </div>
-            <div className='grid  justify-center text-center'>
-              <h3>
-                Air Max 270
-              </h3>
-              <p>
-                $150
-              </p>
-            </div>
-            <button className='bg-blue-400 text-white font-bold p-3 m-5 rounded-xl'>
-              Add to Cart
-            </button>
-          </div>
-
+              </div>
+            ))}
         </div>
 
         <div className='flex w-full justify-between  my-10 gap-10 h-100'>
