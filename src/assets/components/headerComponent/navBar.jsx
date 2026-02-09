@@ -18,14 +18,14 @@ const navBar = () => {
         <img src={SneakIcon} alt="" className='  w-30 rounded-xl' />
       </div>
 
-      <div className=' space-x-12.5 flex place-self-center'>
+      <div className=' space-x-12.5 flex pt-10 '>
         {
           NavBtns.map((navBtn, index) => (
             <Link
               key={index}
               to={navBtn.path}
               onClick={() => setActiveIndex(index)}
-              className={`cursor-pointer  font-bold text-gray-400 hover:text-white transition ${activeIndex === index
+              className={`cursor-pointer font-bold text-gray-400 hover:text-white transition ${activeIndex === index
                   ? "border-b-2 border-white text-white"
                   : ""
                 }`}
