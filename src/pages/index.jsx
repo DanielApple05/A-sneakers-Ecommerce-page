@@ -39,7 +39,7 @@ const Index = () => {
       </section>
 
       <div className='bg-white px-20 py-40'>
-        <h1 className='font-bold text-xl'>
+        <h1 className='font-bold text-3xl'>
           Best Sellers
         </h1>
         <div className='flex w-full gap-10 mt-4'>      
@@ -67,7 +67,7 @@ const Index = () => {
           <div className='w-[50%] relative'>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
 
-            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2 tracking-widest">
+            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2 tracking-wide">
               <p >
                 Men's Collection
               </p>
@@ -86,7 +86,7 @@ const Index = () => {
           <div className='w-[50%] relative'>
             <img src={Jordans_f} alt="" className="w-full h-full object-cover" />
 
-            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2  tracking-widest">
+            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2  tracking-wide">
               <p >
                 Women's Collection
               </p>
