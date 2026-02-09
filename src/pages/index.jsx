@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../assets/components/headerComponent/header';
 import bgHero from '../assets/images/background-hero.png';
 import '../App.css';
-import Addidas from '../assets/images/male-imgfolder/addidas1-m-b.png'
-import Addidas_2_f from '../assets/images/female-imgfolder/addidas2-f.png';
+import Jordans_m from '../assets/images/male-imgfolder/male-jordans-g.png';
+import JordansF from '../assets/images/female-imgfolder/jordansF.png';
 import Nike_1 from '../assets/images/female-imgfolder/nike-f1.png';
 import Jordans_1 from '../assets/images/male-imgfolder/male-jordans1.png';
 import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
@@ -12,6 +12,8 @@ import Footer from '../assets/components/footerComponent/footer'
 
 
 const Index = () => {
+
+  const indexSneakers = [  ]
   return (
     <div className="min-h-screen">
       <div className="sticky top-0 shadow-xl z-50">
@@ -47,7 +49,7 @@ const Index = () => {
 
           <div className='w-[25%] bg-gray-400 grid rounded-xl'>
             <div  >
-              <img src={Addidas} alt="" className='rounded-t-xl' />
+              <img src={Jordans_m} alt="" className='rounded-t-xl' />
             </div>
             <div className='grid  justify-center text-center pt-2'>
               <h3>
@@ -82,7 +84,7 @@ const Index = () => {
 
           <div className='w-[25%] grid bg-gray-400 rounded-xl'>
             <div >
-              <img src={Addidas_2_f} alt="" className='rounded-t-xl' />
+              <img src={JordansF} alt="" className='rounded-t-xl' />
             </div>
             <div className='grid  justify-center text-center'>
               <h3>
