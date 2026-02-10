@@ -55,7 +55,7 @@ const Index = () => {
                   <p className='text-[18px]'>${shoe.price}</p>
                 </div>
 
-                <button className="bg-blue-400 text-white font-bold p-3 m-5 rounded-xl hover:bg-blue-600 cursor-pointer">
+                <button className="bg-blue-400 text-white font-bold p-3 m-7 rounded-xl hover:bg-blue-600 cursor-pointer">
                   Add to Cart
                 </button>
 
