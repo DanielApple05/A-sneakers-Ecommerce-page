@@ -7,11 +7,12 @@ import Footer from '../assets/components/footerComponent/footer'
 const shop = () => {
   return (
     <div>
-      <Header></Header>
-      <ShopGallery sneaker={Sneakers}/>
+      <div className="sticky top-0 shadow-xl z-50">
+        <Header ></Header>
+      </div>
+      <ShopGallery sneaker={Sneakers} />
       <Footer></Footer>
     </div>
   );
 }
-
 export default shop;
