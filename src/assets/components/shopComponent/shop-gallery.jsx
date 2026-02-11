@@ -35,9 +35,9 @@ const ShopGallery = ({ sneaker }) => {
               <FontAwesomeIcon icon={faAngleRight} className="" />
             </div>
             {shoeBrands.map((brand) => (
-              <div key={brand} className="">
+              <div key={brand} className="flex ">
                 <input type="checkbox" />
-                <button className="text-start p-2">{brand}</button>
+                <button className="text-start  p-2 ">{brand}</button>
               </div>
 
             ))
@@ -48,7 +48,10 @@ const ShopGallery = ({ sneaker }) => {
         <div>
           <div className='space-x-4 text-white pb-4'>
             {folders.map((folder) => (
-              <button key={folder} onClick={() => setActiveFilter(folder)} className='bg-red-500 py-2 px-6 rounded-xl cursor-pointer hover:bg-red-800'>{folder}</button>))}
+              <button key={folder} onClick={() => setActiveFilter(folder)} className={` py-2 px-6 rounded-xl cursor-pointer hover:bg-red-800  ${activeFilter === folder
+                  ? "bg-red-700 text-white"
+                  : "bg-gray-400 text-white hover:bg-red-800"
+                }`}>{folder}</button>))}
           </div>
 
           <div className='grid grid-cols-4 gap-6 '>
