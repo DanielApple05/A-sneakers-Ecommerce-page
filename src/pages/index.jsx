@@ -7,9 +7,7 @@ import Jordans_f from '../assets/images/female-imgfolder/female-airforce.png';
 import Footer from '../assets/components/footerComponent/footer'
 import Sneaker from '../assets/components/sneakerData';
 
-
 const Index = () => {
-
   const sneaker = [Sneaker[(0)], Sneaker[(7)], Sneaker[(8)], Sneaker[3] ]
   return (
     <div className="min-h-screen">
@@ -37,7 +35,6 @@ const Index = () => {
           </button>
         </div>
       </section>
-
       <div className='bg-white px-20 py-40'>
         <h1 className='font-bold text-3xl'>
           Best Sellers
@@ -45,24 +42,19 @@ const Index = () => {
         <div className='flex w-full gap-10 mt-4'>      
             {sneaker.map((shoe) => (
               <div key={shoe.id} className="w-[25%] bg-gray-400 grid rounded-xl">
-
                 <div>
                   <img src={shoe.image} alt={shoe.name} className="rounded-t-xl h-full " />
                 </div>
-
                 <div className="grid justify-center text-center pt-2">
                   <h3 className='font-semibold'>{shoe.name}</h3>
                   <p className='text-[18px]'>${shoe.price}</p>
                 </div>
-
                 <button className="bg-blue-400 text-white font-bold p-3 m-7 rounded-xl hover:bg-blue-600 cursor-pointer">
                   Add to Cart
                 </button>
-
               </div>
             ))}
         </div>
-
         <div className='flex w-full justify-between  my-10 gap-10 h-100'>
           <div className='w-[50%] relative'>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
@@ -74,18 +66,13 @@ const Index = () => {
               <p>
                 UP TO 40% OFF
               </p>
-
               <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 '>
                 Shop Men
               </button>
-
             </div>
-
           </div>
-
           <div className='w-[50%] relative'>
             <img src={Jordans_f} alt="" className="w-full h-full object-cover" />
-
             <div className="absolute top-10 left-10 text-lg font-semibold space-y-2  tracking-wide">
               <p >
                 Women's Collection
@@ -97,14 +84,11 @@ const Index = () => {
               <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 '>
                 Shop Women
               </button>
-
             </div>
-
           </div>
         </div>
-
       </div>
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 };

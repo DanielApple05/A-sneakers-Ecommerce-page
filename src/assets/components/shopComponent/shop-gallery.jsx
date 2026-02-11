@@ -34,7 +34,6 @@ const ShopGallery = ({ sneaker }) => {
             </h5>
             <FontAwesomeIcon icon={faAngleRight} className="" />
           </div>
-          {/* Filters content */}
           
             <div className="grid p-3">
               <div className="flex items-center justify-between mb-2">

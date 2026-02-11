@@ -8,10 +8,10 @@ const shop = () => {
   return (
     <div>
       <div className="sticky top-0 shadow-xl z-50">
-        <Header ></Header>
+        <Header/>
       </div>
       <ShopGallery sneaker={Sneakers} />
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 }
