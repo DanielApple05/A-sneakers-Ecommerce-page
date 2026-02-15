@@ -1,9 +1,10 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import 
-import SignUpBgIcon from '../../images/signUpBg.png'
-import Home from '../../../pages/index'
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFontAwesome } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faUser, faLock, faAnchorLock } from '@fortawesome/free-solid-svg-icons';
+import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
+import SignUpBgIcon from '../../images/signUpBg.png'
+import { Link } from 'react-router-dom';
+
 
 const signIn = () => {
   return (
@@ -19,32 +20,56 @@ const signIn = () => {
           </Link>
         </div>
 
-        <div className='grid items-center justify-center bg-white rounded-2xl w-[50%] h-170 m-15 '>
+        <div className='grid gap-y-8  bg-white rounded-2xl w-[50%] m-15 p-10'>
           <div>
             <h1 className=''>
               Create Account
             </h1>
             <p> Already have an account? <span className='text-red-400'>sign in</span></p>
           </div>
-          <div className='bg-red-300 '>
+          <div className=' space-y-5'>
+            <form className='space-y-5'>
+              <div className='border border-gray-400 rounded p-2 flex items-center'>
+                <FontAwesomeIcon icon={faUser} />
+                <input type="text" placeholder='Full Name' className='outline-none ml-3 w-full' />
+              </div>
+              <div className='border border-gray-400 rounded p-2 flex items-center'>
+                <FontAwesomeIcon icon={faEnvelope} />
+                <input type="emails" placeholder='Email Address' className='outline-none ml-3 w-full' />
+              </div>
+              <div className='border border-gray-400 rounded p-2 flex items-center'>
+                <FontAwesomeIcon icon={faLock} />
+                <input type="password" placeholder='Password' className='outline-none ml-3 w-full' />
+              </div>
+              <div className='border border-gray-400 rounded p-2 flex items-center'>
+                <FontAwesomeIcon icon={faAnchorLock} />
+                <input type="password" placeholder='Confirm Password' className='outline-none ml-3 w-full' />
+              </div>
 
-            <div>
-              <input type="text" className='outline ' />
+              <div className='bg-red-600 rounded-lg text-center text-white py-2'>
+                <h3>
+                  Create Account
+                </h3>
+              </div>
+
+            </form>
+
+            <div className='rounded-lg border border-gray-300 shadow-xl py-2  items-center justify-center flex'>
+              <FontAwesomeIcon icon={faGoogle} className='text-yellow-500 text-xl ' />
+              <h3 className='text-center ml-5'>
+                Continue with  Google
+              </h3>
             </div>
-            <div>
-              <input type="emails" className='outline' />
-            </div>
-            <div>
-              <input type="password" className='outline' />
-            </div>
-            <div>
-              <input type="password" className='outline' />
+            <div className='rounded-lg text-center bg-black text-white shadow-xl py-2  items-center justify-center flex'>
+              <FontAwesomeIcon icon={faApple} className='text-2xl' />
+              <h3 className='ml-5'>
+                Continue with  Apple
+              </h3>
             </div>
           </div>
-
         </div>
-      </div>
 
+      </div>
     </div>
   );
 }
