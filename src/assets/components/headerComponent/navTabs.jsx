@@ -2,7 +2,7 @@ import React from 'react';
 
 const navTabs =  [
 
-{ tab: "Home",  path: "/"},
+{ tab: "Home",  path: "/index"},
 { tab: "Shop",  path: "/shop"},
 { tab: "Brands"},
 { tab: "Collections"},
