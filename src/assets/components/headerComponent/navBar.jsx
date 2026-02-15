@@ -26,8 +26,8 @@ const navBar = () => {
               to={navBtn.path}
               onClick={() => setActiveIndex(index)}
               className={`cursor-pointer font-bold text-gray-400 hover:text-white transition ${activeIndex === index
-                  ? "border-b-2 border-white text-white"
-                  : ""
+                ? "border-b-2 border-white text-white"
+                : ""
                 }`}
             >
               {navBtn.tab}
@@ -35,16 +35,18 @@ const navBar = () => {
           ))
         }
       </div>
-      <div className="text-gray-400 flex gap-7.5">
+      <div className="text-gray-400 flex gap-7.5 items-center">
         <button>
           <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[25px] cursor-pointer hover:text-white transition' />
         </button>
         <button>
           <FontAwesomeIcon icon={faCartShopping} className='text-[25px] cursor-pointer hover:text-white transition' />
         </button>
-        <button>
-          <FontAwesomeIcon icon={faCircleUser} className='text-[30px] cursor-pointer hover:text-white transition ' />
-        </button>
+        <Link to="/"> 
+         <button>
+           <FontAwesomeIcon icon={faCircleUser} className='text-[30px] cursor-pointer hover:text-white transition ' />
+          </button>
+        </Link>
       </div>
 
     </div >
