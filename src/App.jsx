@@ -3,7 +3,6 @@ import Index from './pages/index';
 import Shop from './pages/shop';
 import SignUp from './assets/components/signUp/signIn'
 
-
 const App = () => {
   
   return (
