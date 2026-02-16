@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFontAwesome } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faUser, faLock, faAnchorLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import SignUpBgIcon from '../../images/signUpBg.png'
@@ -8,7 +7,46 @@ import { useState } from 'react';
 
 
 const signIn = () => {
- const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errors, setErrors] = useState({});
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let newErrors = {};
+
+    if (!isLogin && !fullName) {
+      newErrors.fullName = "Full name is required.";
+    }
+
+    if (!email) {
+      newErrors.email = "Email is required.";
+    } else if (!email.includes("@")) {
+      newErrors.email = "Enter a valid email.";
+    }
+
+    if (!password) {
+      newErrors.password = "Password is required.";
+    } else if (password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters.";
+    }
+
+    if (!isLogin && password !== confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match.";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      console.log("Form submitted successfully");
+    }
+  };
+
   return (
     <div className="absolute inset-0 bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${SignUpBgIcon})` }}>
@@ -39,47 +77,65 @@ const signIn = () => {
 
           </div>
           <div className=' space-y-5'>
-            <form className='space-y-5'>
-             { !isLogin && ( <div className='border border-gray-400 rounded p-2 flex items-center'>
+            <form className='space-y-5' onSubmit={handleSubmit}>
+              {!isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faUser} />
-                <input 
-                type="text"
-                  required 
-                placeholder='Full Name'
-                 className='outline-none ml-3 w-full' />
-              </div>)
+                <input
+                  type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  placeholder='Full Name'
+                  className='outline-none ml-3 w-full' />
+              </div>)}
+              {errors.fullName && (
+                <p className="text-red-500 text-sm">{errors.fullName}</p>
+              )}
 
-             }
               <div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faEnvelope} />
-                <input 
-                type="email" 
-                required
-                placeholder='Email Address' className='outline-none ml-3 w-full' />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder='Email Address'
+                  className='outline-none ml-3 w-full'
+                />
               </div>
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email}</p>
+              )}
+
               <div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faLock} />
-                <input 
-                type="password" 
-                required
-                placeholder='Password' className='outline-none ml-3 w-full' />
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder='Password' className='outline-none ml-3 w-full' />
               </div>
-             { !isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
+              {errors.password && (
+                <p className="text-red-500 text-sm">{errors.password}</p>
+              )}
+
+              {!isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faAnchorLock} />
-                <input 
-                type="password" 
-                required
-                placeholder='Confirm Password' className='outline-none ml-3 w-full' />
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder='Confirm Password' className='outline-none ml-3 w-full' />
               </div>)}
+              {errors.confirmPassword && (
+                <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
+              )}
 
-              <div className='bg-red-600 rounded-lg text-center text-white py-2'>
-                <h3>
-                  {isLogin ? "Login" : "Create Account"}
-                </h3>
-              </div>
-
+              <button
+                type="submit"
+                className='bg-red-600 rounded-lg text-center text-white py-2 w-full'
+              >
+                {isLogin ? "Login" : "Create Account"}
+              </button>
             </form>
-
             <div className='rounded-lg border border-gray-300 shadow-xl py-2  items-center justify-center flex'>
               <FontAwesomeIcon icon={faGoogle} className='text-yellow-500 text-xl ' />
               <h3 className='text-center ml-5'>
