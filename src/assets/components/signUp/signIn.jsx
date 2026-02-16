@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 
 const signIn = () => {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [isLogin, setIsLogin] = useState(false);
   const [fullName, setFullName] = useState("");
@@ -55,14 +55,13 @@ const navigate = useNavigate();
       style={{ backgroundImage: `url(${SignUpBgIcon})` }}>
 
       <div className='flex justify-between w-full '>
-        <div className='flex m-7 text-white w-[50%]'>
-          <Link>
-            <button className='shop-btn' >
-             
-            </button>
-          </Link>
+        <div className='flex m-7 text-white w-[50%] '>
+         <div>
+           <button className='shop-btn ' >
+            Blog
+          </button>
+         </div>
         </div>
-
         <div className='grid gap-y-8  bg-white rounded-2xl w-[50%] m-15 p-10'>
           <div>
             <h1 className=''>
