@@ -4,9 +4,11 @@ import { faEnvelope, faUser, faLock, faAnchorLock } from '@fortawesome/free-soli
 import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import SignUpBgIcon from '../../images/signUpBg.png'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const signIn = () => {
+ const [isLogin, setIsLogin] = useState(false);
   return (
     <div className="absolute inset-0 bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${SignUpBgIcon})` }}>
@@ -23,32 +25,56 @@ const signIn = () => {
         <div className='grid gap-y-8  bg-white rounded-2xl w-[50%] m-15 p-10'>
           <div>
             <h1 className=''>
-              Create Account
+              {isLogin ? "Login" : "Create Account"}
             </h1>
-            <p> Already have an account? <span className='text-red-400'>sign in</span></p>
+            <p>
+              {isLogin ? "Don't have an account?" : "Already have an account?"}
+              <span
+                onClick={() => setIsLogin(!isLogin)}
+                className="text-red-600 cursor-pointer ml-1"
+              >
+                {isLogin ? "Create Account" : "Login"}
+              </span>
+            </p>
+
           </div>
           <div className=' space-y-5'>
             <form className='space-y-5'>
-              <div className='border border-gray-400 rounded p-2 flex items-center'>
+             { !isLogin && ( <div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faUser} />
-                <input type="text" placeholder='Full Name' className='outline-none ml-3 w-full' />
-              </div>
+                <input 
+                type="text"
+                  required 
+                placeholder='Full Name'
+                 className='outline-none ml-3 w-full' />
+              </div>)
+
+             }
               <div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faEnvelope} />
-                <input type="emails" placeholder='Email Address' className='outline-none ml-3 w-full' />
+                <input 
+                type="email" 
+                required
+                placeholder='Email Address' className='outline-none ml-3 w-full' />
               </div>
               <div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faLock} />
-                <input type="password" placeholder='Password' className='outline-none ml-3 w-full' />
+                <input 
+                type="password" 
+                required
+                placeholder='Password' className='outline-none ml-3 w-full' />
               </div>
-              <div className='border border-gray-400 rounded p-2 flex items-center'>
+             { !isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
                 <FontAwesomeIcon icon={faAnchorLock} />
-                <input type="password" placeholder='Confirm Password' className='outline-none ml-3 w-full' />
-              </div>
+                <input 
+                type="password" 
+                required
+                placeholder='Confirm Password' className='outline-none ml-3 w-full' />
+              </div>)}
 
               <div className='bg-red-600 rounded-lg text-center text-white py-2'>
                 <h3>
-                  Create Account
+                  {isLogin ? "Login" : "Create Account"}
                 </h3>
               </div>
 
