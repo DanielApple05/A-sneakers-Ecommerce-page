@@ -2,11 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faLock, faAnchorLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import SignUpBgIcon from '../../images/signUpBg.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 
 const signIn = () => {
+const navigate = useNavigate();
+
   const [isLogin, setIsLogin] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -44,6 +46,7 @@ const signIn = () => {
 
     if (Object.keys(newErrors).length === 0) {
       console.log("Form submitted successfully");
+      navigate('/index')
     }
   };
 
@@ -53,9 +56,9 @@ const signIn = () => {
 
       <div className='flex justify-between w-full '>
         <div className='flex m-7 text-white w-[50%]'>
-          <Link to="./index">
+          <Link>
             <button className='shop-btn' >
-              Go To Home
+             
             </button>
           </Link>
         </div>
@@ -74,7 +77,6 @@ const signIn = () => {
                 {isLogin ? "Create Account" : "Login"}
               </span>
             </p>
-
           </div>
           <div className=' space-y-5'>
             <form className='space-y-5' onSubmit={handleSubmit}>
