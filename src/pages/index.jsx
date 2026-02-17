@@ -62,21 +62,21 @@ const Index = () => {
           <div className='w-[50%] relative h-3/4'>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
 
-            <div className="absolute top-5 left-10 text-lg font-semibold space-y-1 tracking-wide">
+            <div className="absolute top-5 left-10 font-semibold space-y-1">
               <p >
                 Men's Collection
               </p>
               <p>
                 UP TO 40% OFF
               </p>
-              <button className='Shop-Men bg-red-600 px-8 rounded py-1 mt-4 '>
+              <button className='Shop-Men bg-red-600 px-8 rounded py-1  '>
                 Shop Men
               </button>
             </div>
           </div>
-          <div className='w-[50%] relative h-3/4'>
+          <div className='w-[50%] relative h-3/4 '>
             <img src={Jordans_f} alt="" className="w-full h-full object-cover" />
-            <div className="absolute top-5 left-10 text-lg font-semibold space-y-2  tracking-wide">
+            <div className="absolute top-5 left-10 font-semibold space-y-1 ">
               <p >
                 Women's Collection
               </p>

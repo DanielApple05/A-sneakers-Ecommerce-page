@@ -22,7 +22,7 @@ const ShopGallery = ({ sneaker }) => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
-
+ const [isClosed, setIsClosed] = useState(false);
 
   return (
     <div className=' py-10 w-full bg-[#FDF6EC] '>
@@ -32,18 +32,17 @@ const ShopGallery = ({ sneaker }) => {
       <div className="flex pr-10 justify-between ">
         <div className='bg-white ml-10 w-[15%] h-65'>
           <div className='font-semibold border-b p-3 flex items-center justify-between'>
-            <h5 className=''>
+            <h6 className=''>
               Filters
-            </h5>
-            <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} className="" onClick={() => setIsOpen(!isOpen)} />
+            </h6>
+            <FontAwesomeIcon icon={isClosed ? faAngleRight : faAngleDown} onClick={() => setIsClosed(!isClosed)} />
           </div>
-
-        {!isOpen && ( <div className="grid p-3  ">
-            <div className="flex items-center justify-between mb-2">
-              <h3>Brands</h3>
-              <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight}  onClick={() => setIsOpen(!isOpen)} />
-            </div>
-              {shoeBrands.map((brand) => (
+          { isClosed &&  <div className="grid p-3 ">
+          <div className="flex items-center justify-between mb-2">
+              <h6>Brands</h6>
+              <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} onClick={() => setIsOpen(!isOpen)} />
+            </div> 
+            {!isOpen && shoeBrands.map((brand) => (
               <div key={brand} className="flex gap-2 items-center">
                 <input
                   type="checkbox"
@@ -56,12 +55,12 @@ const ShopGallery = ({ sneaker }) => {
                     }
                   }}
                 />
-                <span className="text-start p-2 capitalize">{brand}</span>
+                <span className="text-start p-2 text-sm capitalize">{brand}</span>
               </div>
             ))}
-          </div> )}
-        </div>
-          
+          </div>}
+        </div> 
+
         <div className="grid w-[80%] border-l pl-10">
           <div className="flex justify-between ">
             <div className='space-x-4 text-white pb-4'>
