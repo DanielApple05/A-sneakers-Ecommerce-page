@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faArrowRotateLeft, faBold } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faArrowRotateLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 
 const ShopGallery = ({ sneaker }) => {
@@ -21,6 +21,9 @@ const ShopGallery = ({ sneaker }) => {
     setSelectedBrands([]);
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <div className=' py-10 w-full bg-[#FDF6EC] '>
       <h2 className="mb-6 text-[30px] pl-20 font-bold">
@@ -32,15 +35,15 @@ const ShopGallery = ({ sneaker }) => {
             <h5 className=''>
               Filters
             </h5>
-            <FontAwesomeIcon icon={faAngleRight} className="" />
+            <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} className="" onClick={() => setIsOpen(!isOpen)} />
           </div>
 
-          <div className="grid p-3  ">
-            <div className="flex items-center justify-between mb-2">
+        <div className="grid p-3  ">
+            {isOpen && ( <div className="flex items-center justify-between mb-2">
               <h3>Brands</h3>
-              <FontAwesomeIcon icon={faAngleRight} />
-            </div>
-            {shoeBrands.map((brand) => (
+              <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight}  onClick={() => setIsOpen(!isOpen)} />
+            </div>)}
+              {shoeBrands.map((brand) => (
               <div key={brand} className="flex gap-2 items-center">
                 <input
                   type="checkbox"
@@ -57,8 +60,8 @@ const ShopGallery = ({ sneaker }) => {
               </div>
             ))}
           </div>
-
         </div>
+          
         <div className="grid w-[80%] border-l pl-10">
           <div className="flex justify-between ">
             <div className='space-x-4 text-white pb-4'>
