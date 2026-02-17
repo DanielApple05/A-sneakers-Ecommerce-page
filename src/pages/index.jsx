@@ -16,7 +16,7 @@ const Index = () => {
       </div>
       <section className="relative h-screen">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-b-4xl"
           style={{ backgroundImage: `url(${bgHero})` }}
         />
         <div />
