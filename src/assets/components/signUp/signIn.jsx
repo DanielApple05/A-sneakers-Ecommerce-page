@@ -55,26 +55,26 @@ const signIn = () => {
       style={{ backgroundImage: `url(${SignUpBgIcon})` }}>
 
       <div className='flex justify-between w-full '>
-        <div className='m-7 text-white w-[50%] bg-blue-300 '>
+        <div className='m-7 text-white w-[50%]'>
           <div>
             <button className='shop-btn ' >
               Blog
             </button>
           </div>
-          <div className='flex justify-center pt-30'> 
-            <div className='text-center text-[60px]'>
-              <p>Shop</p> <p>With</p> <p>us </p> <span className='text-black'>Today</span>
+            <div className='text-[120px] font-bold tracking-wider text-start  mt-20'>
+              <p className='pl-10'>Step Into</p> 
+               <p className='text-amber-400 pl-20'>Your style </p> 
+               <p className='text-[14px] text-center mt-5 text-black'>Join thosands, finding their perfect sneakers...</p>
             </div>
-          </div>
         </div>
         <div className='grid gap-y-8  bg-white rounded-2xl w-[50%] m-15 p-10'>
           <div>
-            <div className='mb-6'>
-              <h1 className=''>
-                {isLogin ? "Login" : "Create Account"}
-              </h1>
+            <div className='mb-6 space-y-2'>
+              <h3 className=''>
+                {isLogin ? "Login" : "Join the sneaker community"}
+              </h3>
               <p>
-                {isLogin ? "Don't have an account?" : "Already have an account?"}
+                {isLogin ? "Don't have an account?" : "Already a member?"}
                 <span
                   onClick={() => setIsLogin(!isLogin)}
                   className="text-red-600 cursor-pointer ml-1"
