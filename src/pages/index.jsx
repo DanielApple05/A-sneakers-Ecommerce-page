@@ -8,7 +8,7 @@ import Footer from '../assets/components/footerComponent/footer'
 import Sneaker from '../assets/components/sneakerData';
 
 const Index = () => {
-  const sneaker = [Sneaker[(0)], Sneaker[(7)], Sneaker[(8)], Sneaker[3] ]
+  const sneaker = [Sneaker[(0)], Sneaker[(7)], Sneaker[(8)], Sneaker[3]]
   return (
     <div className="min-h-screen">
       <div className="sticky top-0 shadow-xl z-50">
@@ -20,60 +20,60 @@ const Index = () => {
           style={{ backgroundImage: `url(${bgHero})` }}
         />
         <div />
-        <div className="relative z-10  space-y-5 text-white px-20 py-45">
-          <h5 className='text-4xl font-bold'>
+        <div className="relative z-10  space-y-3 text-white px-20 py-10 ">
+          <h5 className='font-bold'>
             Latest Collection
           </h5>
           <h1 className="text-white text-7xl font-bold ">
             Step Into Style
           </h1>
           <p className='tracking-widest font-bold'>
-            Discover the hotest sneakers of the season
+            Discover the hottest sneakers of the season
           </p>
           <button className='shop-btn tracking-widest'>
             Shop Now
           </button>
         </div>
       </section>
-      <div className='bg-white px-20 py-40'>
-        <h1 className='font-bold text-3xl'>
+      <div className='bg-white px-20 py-10'>
+        <h3 className='font-bold'>
           Best Sellers
-        </h1>
-        <div className='flex w-full gap-10 mt-4'>      
-            {sneaker.map((shoe) => (
-              <div key={shoe.id} className="w-[25%] bg-gray-400 grid rounded-xl">
-                <div>
-                  <img src={shoe.image} alt={shoe.name} className="rounded-t-xl h-full " />
-                </div>
-                <div className="grid justify-center text-center pt-2">
-                  <h3 className='font-semibold'>{shoe.name}</h3>
-                  <p className='text-[18px]'>${shoe.price}</p>
-                </div>
-                <button className="bg-blue-400 text-white font-bold p-3 m-7 rounded-xl hover:bg-blue-600 cursor-pointer">
-                  Add to Cart
-                </button>
+        </h3>
+        <div className='flex w-full gap-10 mt-4'>
+          {sneaker.map((shoe) => (
+            <div key={shoe.id} className="w-[25%] bg-gray-400 grid rounded-xl">
+              <div>
+                <img src={shoe.image} alt={shoe.name} className="rounded-t-xl h-full " />
               </div>
-            ))}
+              <div className="grid justify-center text-center pt-2">
+                <h3 className='font-semibold'>{shoe.name}</h3>
+                <p className='text-[18px]'>${shoe.price}</p>
+              </div>
+              <button className="bg-blue-400 text-white font-bold p-3 m-7 rounded-xl hover:bg-blue-600 cursor-pointer">
+                Add to Cart
+              </button>
+            </div>
+          ))}
         </div>
         <div className='flex w-full justify-between  my-10 gap-10 h-100'>
-          <div className='w-[50%] relative'>
+          <div className='w-[50%] relative h-3/4'>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
 
-            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2 tracking-wide">
+            <div className="absolute top-5 left-10 text-lg font-semibold space-y-1 tracking-wide">
               <p >
                 Men's Collection
               </p>
               <p>
                 UP TO 40% OFF
               </p>
-              <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 '>
+              <button className='Shop-Men bg-red-600 px-8 rounded py-1 mt-4 '>
                 Shop Men
               </button>
             </div>
           </div>
-          <div className='w-[50%] relative'>
+          <div className='w-[50%] relative h-3/4'>
             <img src={Jordans_f} alt="" className="w-full h-full object-cover" />
-            <div className="absolute top-10 left-10 text-lg font-semibold space-y-2  tracking-wide">
+            <div className="absolute top-5 left-10 text-lg font-semibold space-y-2  tracking-wide">
               <p >
                 Women's Collection
               </p>
@@ -81,14 +81,14 @@ const Index = () => {
                 NEW ARRIVALS
               </p>
 
-              <button className='Shop-Men bg-red-600 px-8 rounded py-2 mt-4 '>
+              <button className='Shop-Men bg-red-600 px-4 rounded py-1 '>
                 Shop Women
               </button>
             </div>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
