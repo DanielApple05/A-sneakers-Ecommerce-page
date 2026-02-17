@@ -68,7 +68,7 @@ const signIn = () => {
           </div>
         </div>
         <div className='gap-y-8  bg-white rounded-2xl w-[35%] mr-25 mt-25 p-10'>
-          <div className='grid space-y-2 '>
+          <div className=' space-y-2 '>
             <div className='mb-6 space-y-2 '>
               <h3 className=''>
                 {isLogin ? "Get back in" : "Join the sneaker community"}
@@ -77,7 +77,7 @@ const signIn = () => {
                 {isLogin ? "Not a member?" : "Already a member?"}
                 <span
                   onClick={() => setIsLogin(!isLogin)}
-                  className="text-red-600 cursor-pointer ml-1"
+                  className="text-red-600 text-sm cursor-pointer ml-1"
                 >
                   {isLogin ? "join" : "Get back in"}
                 </span>
@@ -148,7 +148,7 @@ const signIn = () => {
                   Continue with  Google
                 </h3>
               </div>
-              <div className='rounded-lg text-center bg-black text-white shadow-xl py-2  items-center justify-center flex'>
+              <div className='rounded-lg text-center bg-black text-white shadow-xl pt-2  items-center justify-center flex'>
                 <FontAwesomeIcon icon={faApple} className='text-2xl' />
                 <h3 className='ml-5 cursor-pointer'>
                   Continue with  Apple
