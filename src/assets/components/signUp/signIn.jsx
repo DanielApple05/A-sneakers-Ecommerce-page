@@ -74,12 +74,12 @@ const signIn = () => {
                 {isLogin ? "Login" : "Join the sneaker community"}
               </h3>
               <p>
-                {isLogin ? "Don't have an account?" : "Already a member?"}
+                {isLogin ? "Not a member?" : "Already a member?"}
                 <span
                   onClick={() => setIsLogin(!isLogin)}
                   className="text-red-600 cursor-pointer ml-1"
                 >
-                  {isLogin ? "Create Account" : "Login"}
+                  {isLogin ? "join" : "Login"}
                 </span>
               </p>
             </div>
