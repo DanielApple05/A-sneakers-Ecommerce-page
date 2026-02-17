@@ -3,10 +3,9 @@ import FtNavBtns from "./footerTab";
 import { useState } from "react";
 
 const FooterNavs = () => {
-
   const [email, setEmail] = useState("");
-  const[error, setError] = useState("");
-  const[message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,9 +15,7 @@ const FooterNavs = () => {
       setMessage("");
       setEmail("")
       return;
-
     }
-
     if (email.includes("@")) {
       setMessage("You're Subscribed");
       setError("");
@@ -27,7 +24,6 @@ const FooterNavs = () => {
   }
 
   return (
-
     <div className="bg-zinc-900 py-12.5 text-gray-400 ">
       <div className="border-b " >
         <div className=" flex justify-between px-20 pb-15">

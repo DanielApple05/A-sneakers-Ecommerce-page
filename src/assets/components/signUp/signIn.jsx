@@ -55,99 +55,106 @@ const signIn = () => {
       style={{ backgroundImage: `url(${SignUpBgIcon})` }}>
 
       <div className='flex justify-between w-full '>
-        <div className='flex m-7 text-white w-[50%] '>
-         <div>
-           <button className='shop-btn ' >
-            Blog
-          </button>
-         </div>
+        <div className='m-7 text-white w-[50%] bg-blue-300 '>
+          <div>
+            <button className='shop-btn ' >
+              Blog
+            </button>
+          </div>
+          <div className='flex justify-center pt-30'> 
+            <div className='text-center text-[60px]'>
+              <p>Shop</p> <p>With</p> <p>us </p> <span className='text-black'>Today</span>
+            </div>
+          </div>
         </div>
         <div className='grid gap-y-8  bg-white rounded-2xl w-[50%] m-15 p-10'>
           <div>
-            <h1 className=''>
-              {isLogin ? "Login" : "Create Account"}
-            </h1>
-            <p>
-              {isLogin ? "Don't have an account?" : "Already have an account?"}
-              <span
-                onClick={() => setIsLogin(!isLogin)}
-                className="text-red-600 cursor-pointer ml-1"
-              >
-                {isLogin ? "Create Account" : "Login"}
-              </span>
-            </p>
-          </div>
-          <div className=' space-y-5'>
-            <form className='space-y-5' onSubmit={handleSubmit}>
-              {!isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
-                <FontAwesomeIcon icon={faUser} />
-                <input
-                  type="text"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  placeholder='Full Name'
-                  className='outline-none ml-3 w-full' />
-              </div>)}
-              {errors.fullName && (
-                <p className="text-red-500 text-sm">{errors.fullName}</p>
-              )}
-
-              <div className='border border-gray-400 rounded p-2 flex items-center'>
-                <FontAwesomeIcon icon={faEnvelope} />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder='Email Address'
-                  className='outline-none ml-3 w-full'
-                />
-              </div>
-              {errors.email && (
-                <p className="text-red-500 text-sm">{errors.email}</p>
-              )}
-
-              <div className='border border-gray-400 rounded p-2 flex items-center'>
-                <FontAwesomeIcon icon={faLock} />
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder='Password' className='outline-none ml-3 w-full' />
-              </div>
-              {errors.password && (
-                <p className="text-red-500 text-sm">{errors.password}</p>
-              )}
-
-              {!isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
-                <FontAwesomeIcon icon={faAnchorLock} />
-                <input
-                  type="password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  placeholder='Confirm Password' className='outline-none ml-3 w-full' />
-              </div>)}
-              {errors.confirmPassword && (
-                <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
-              )}
-
-              <button
-                type="submit"
-                className='bg-red-600 rounded-lg text-center text-white py-2 w-full'
-              >
+            <div className='mb-6'>
+              <h1 className=''>
                 {isLogin ? "Login" : "Create Account"}
-              </button>
-            </form>
-            <div className='rounded-lg border border-gray-300 shadow-xl py-2  items-center justify-center flex'>
-              <FontAwesomeIcon icon={faGoogle} className='text-yellow-500 text-xl ' />
-              <h3 className='text-center ml-5'>
-                Continue with  Google
-              </h3>
+              </h1>
+              <p>
+                {isLogin ? "Don't have an account?" : "Already have an account?"}
+                <span
+                  onClick={() => setIsLogin(!isLogin)}
+                  className="text-red-600 cursor-pointer ml-1"
+                >
+                  {isLogin ? "Create Account" : "Login"}
+                </span>
+              </p>
             </div>
-            <div className='rounded-lg text-center bg-black text-white shadow-xl py-2  items-center justify-center flex'>
-              <FontAwesomeIcon icon={faApple} className='text-2xl' />
-              <h3 className='ml-5'>
-                Continue with  Apple
-              </h3>
+            <div className=' space-y-5'>
+              <form className='space-y-5' onSubmit={handleSubmit}>
+                {!isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
+                  <FontAwesomeIcon icon={faUser} />
+                  <input
+                    type="text"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    placeholder='Full Name'
+                    className='outline-none ml-3 w-full' />
+                </div>)}
+                {errors.fullName && (
+                  <p className="text-red-500 text-sm">{errors.fullName}</p>
+                )}
+
+                <div className='border border-gray-400 rounded p-2 flex items-center'>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder='Email Address'
+                    className='outline-none ml-3 w-full'
+                  />
+                </div>
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email}</p>
+                )}
+
+                <div className='border border-gray-400 rounded p-2 flex items-center'>
+                  <FontAwesomeIcon icon={faLock} />
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder='Password' className='outline-none ml-3 w-full' />
+                </div>
+                {errors.password && (
+                  <p className="text-red-500 text-sm">{errors.password}</p>
+                )}
+
+                {!isLogin && (<div className='border border-gray-400 rounded p-2 flex items-center'>
+                  <FontAwesomeIcon icon={faAnchorLock} />
+                  <input
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    placeholder='Confirm Password' className='outline-none ml-3 w-full' />
+                </div>)}
+                {errors.confirmPassword && (
+                  <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
+                )}
+
+                <button
+                  type="submit"
+                  className='bg-red-600 rounded-lg text-center text-white py-2 w-full cursor-pointer'
+                >
+                  {isLogin ? "Login" : "Create Account"}
+                </button>
+              </form>
+              <div className='rounded-lg border border-gray-300 shadow-xl py-2  items-center justify-center flex'>
+                <FontAwesomeIcon icon={faGoogle} className='text-yellow-500 text-xl ' />
+                <h3 className='text-center ml-5 cursor-pointer'>
+                  Continue with  Google
+                </h3>
+              </div>
+              <div className='rounded-lg text-center bg-black text-white shadow-xl py-2  items-center justify-center flex'>
+                <FontAwesomeIcon icon={faApple} className='text-2xl' />
+                <h3 className='ml-5 cursor-pointer'>
+                  Continue with  Apple
+                </h3>
+              </div>
             </div>
           </div>
         </div>
