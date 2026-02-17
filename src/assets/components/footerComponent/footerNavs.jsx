@@ -1,7 +1,31 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FtNavBtns from "./footerTab";
+import { useState } from "react";
 
 const FooterNavs = () => {
+
+  const [email, setEmail] = useState("");
+  const[error, setError] = useState("");
+  const[message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      setError("Invalid Email");
+      setMessage("");
+      setEmail("")
+      return;
+
+    }
+
+    if (email.includes("@")) {
+      setMessage("You're Subscribed");
+      setError("");
+      return;
+    }
+  }
+
   return (
 
     <div className="bg-zinc-900 py-12.5 text-gray-400 ">
@@ -15,8 +39,6 @@ const FooterNavs = () => {
               </h5>
             ))}
           </div>
-
-
           <div className="flex flex-col items-start">
             <h3 className="mb-4 font-semibold">Follow Us</h3>
             <div className="flex space-x-4">
@@ -30,19 +52,24 @@ const FooterNavs = () => {
             <h3>
               Subscribe To Our Newsletter
             </h3>
-            <div className="flex items-center bg-white rounded overflow-hidden  mb-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 py-3 px-4 outline-none text-sm"
-              />
-
-              <button className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 text-sm font-semibold tracking-wide transition">
-                Subscribe
-              </button>
+            <div className=" bg-white rounded overflow-hidden mb-3">
+              <form onSubmit={handleSubmit} className="flex pt-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 py-3 px-4 outline-none text-sm"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button type="submit" className="bg-red-700 hover:bg-red-800 text-white px-6 py-3 text-sm font-semibold tracking-wide transition">
+                  Subscribe
+                </button>
+              </form>
             </div>
-
-
+            <div>
+                     {error && <p className="text-sm text-red-500" >{error}</p>}
+                {message && <p className="text-sm text-green-500" >{message}</p>}
+            </div>
             <div className="flex gap-x-3 " >
               {
                 FtNavBtns.cards.map((card, index) => (
@@ -64,7 +91,7 @@ const FooterNavs = () => {
         <div className="flex gap-x-18  ">
           {
             FtNavBtns.brandIcon.map((brand) => (
-              <img key={brand} src={brand} alt="" className="w-20 rounded"/>
+              <img key={brand} src={brand} alt="" className="w-20 rounded" />
 
             ))
           }
