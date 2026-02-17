@@ -71,7 +71,7 @@ const signIn = () => {
           <div>
             <div className='mb-6 space-y-2'>
               <h3 className=''>
-                {isLogin ? "Login" : "Join the sneaker community"}
+                {isLogin ? "Get back in" : "Join the sneaker community"}
               </h3>
               <p>
                 {isLogin ? "Not a member?" : "Already a member?"}
@@ -79,7 +79,7 @@ const signIn = () => {
                   onClick={() => setIsLogin(!isLogin)}
                   className="text-red-600 cursor-pointer ml-1"
                 >
-                  {isLogin ? "join" : "Login"}
+                  {isLogin ? "join" : "Get back in"}
                 </span>
               </p>
             </div>
