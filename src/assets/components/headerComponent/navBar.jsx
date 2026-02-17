@@ -11,14 +11,14 @@ const navBar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className='flex justify-between  px-20  bg-black/90 min-h-30'>
+    <div className='flex justify-between px-20 bg-black/90 min-h-20'>
 
 
       <div className='flex items-center'>
-        <img src={SneakIcon} alt="" className='  w-30 rounded-xl' />
+        <img src={SneakIcon} alt="" className='  w-25 rounded-xl' />
       </div>
 
-      <div className=' space-x-12.5 flex pt-10 '>
+      <div className=' space-x-12.5 flex pt-10 text-sm'>
         {
           NavBtns.map((navBtn, index) => (
             <Link
@@ -30,21 +30,21 @@ const navBar = () => {
                 : ""
                 }`}
             >
-              {navBtn.tab}
+             <p>{navBtn.tab}</p> 
             </Link>
           ))
         }
       </div>
       <div className="text-gray-400 flex gap-7.5 items-center">
         <button>
-          <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[25px] cursor-pointer hover:text-white transition' />
+          <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[20px] cursor-pointer hover:text-white transition' />
         </button>
         <button>
-          <FontAwesomeIcon icon={faCartShopping} className='text-[25px] cursor-pointer hover:text-white transition' />
+          <FontAwesomeIcon icon={faCartShopping} className='text-[20px] cursor-pointer hover:text-white transition' />
         </button>
-        <Link to="/"> 
-         <button>
-           <FontAwesomeIcon icon={faCircleUser} className='text-[30px] cursor-pointer hover:text-white transition ' />
+        <Link to="/">
+          <button>
+            <FontAwesomeIcon icon={faCircleUser} className='text-[25px] cursor-pointer hover:text-white transition ' />
           </button>
         </Link>
       </div>

@@ -59,7 +59,7 @@ const ShopGallery = ({ sneaker }) => {
             </div>
 
         </div>
-        <div>
+        <div className="grid">
           <div className="flex justify-between">
             <div className='space-x-4 text-white pb-4'>
               {folders.map((folder) => (
@@ -74,10 +74,10 @@ const ShopGallery = ({ sneaker }) => {
           </div>
           <div className='grid grid-cols-4 gap-6 '>
             {filteredShoes.map((shoe) => (
-              <div key={shoe.id} className="grid bg-gray-400 rounded-xl shadow-xl">
-                <img src={shoe.image} className="rounded-t-xl" />
+              <div key={shoe.id} className="grid bg-gray-400 rounded-xl shadow-xl ">
+                <img src={shoe.image} className="rounded-t-xl " />
                 <div className="text-center pt-2">
-                  <h3 className="font-semibold">{shoe.name}</h3>
+                  <h6 className="font-semibold">{shoe.name}</h6>
                   <p>${shoe.price}</p>
                 </div>
                 <button className="bg-blue-400 text-white m-7 font-bold p-3 rounded-xl cursor-pointer hover:bg-blue-500">
