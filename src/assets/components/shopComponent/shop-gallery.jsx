@@ -22,45 +22,45 @@ const ShopGallery = ({ sneaker }) => {
   };
 
   return (
-    <div className='px-20 py-10  bg-[#FDF6EC]'>
-      <h2 className="mb-6 text-[30px] font-bold">
+    <div className=' py-10 w-full bg-[#FDF6EC] '>
+      <h2 className="mb-6 text-[30px] pl-20 font-bold">
         Shop
       </h2>
-      <div className="flex ">
-        <div className='bg-white w-8/12 h-screen mr-8 sticky'>
+      <div className="flex pr-10 justify-between ">
+        <div className='bg-white ml-10 w-[15%] h-65'>
           <div className='font-semibold border-b p-3 flex items-center justify-between'>
             <h5 className=''>
               Filters
             </h5>
             <FontAwesomeIcon icon={faAngleRight} className="" />
           </div>
-          
-            <div className="grid p-3">
-              <div className="flex items-center justify-between mb-2">
-                <h3>Brands</h3>
-                <FontAwesomeIcon icon={faAngleRight} />
-              </div>
-              {shoeBrands.map((brand) => (
-                <div key={brand} className="flex gap-2 items-center">
-                  <input
-                    type="checkbox"
-                    checked={selectedBrands.includes(brand)}
-                    onChange={() => {
-                      if (selectedBrands.includes(brand)) {
-                        setSelectedBrands(selectedBrands.filter((b) => b !== brand));
-                      } else {
-                        setSelectedBrands([...selectedBrands, brand]);
-                      }
-                    }}
-                  />
-                  <span className="text-start p-2 capitalize">{brand}</span>
-                </div>
-              ))}
+
+          <div className="grid p-3  ">
+            <div className="flex items-center justify-between mb-2">
+              <h3>Brands</h3>
+              <FontAwesomeIcon icon={faAngleRight} />
             </div>
+            {shoeBrands.map((brand) => (
+              <div key={brand} className="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  checked={selectedBrands.includes(brand)}
+                  onChange={() => {
+                    if (selectedBrands.includes(brand)) {
+                      setSelectedBrands(selectedBrands.filter((b) => b !== brand));
+                    } else {
+                      setSelectedBrands([...selectedBrands, brand]);
+                    }
+                  }}
+                />
+                <span className="text-start p-2 capitalize">{brand}</span>
+              </div>
+            ))}
+          </div>
 
         </div>
-        <div className="grid">
-          <div className="flex justify-between">
+        <div className="grid w-[80%] border-l pl-10">
+          <div className="flex justify-between ">
             <div className='space-x-4 text-white pb-4'>
               {folders.map((folder) => (
                 <button key={folder} onClick={() => setActiveFilter(folder)} className={` py-2 px-6 rounded-xl cursor-pointer hover:bg-red-800  ${activeFilter === folder
@@ -74,13 +74,13 @@ const ShopGallery = ({ sneaker }) => {
           </div>
           <div className='grid grid-cols-4 gap-6 '>
             {filteredShoes.map((shoe) => (
-              <div key={shoe.id} className="grid bg-gray-400 rounded-xl shadow-xl ">
-                <img src={shoe.image} className="rounded-t-xl " />
+              <div key={shoe.id} className="flex flex-col h-86 bg-gray-400 rounded-xl shadow-xl">
+                <img src={shoe.image} className="rounded-t-xl h-50 " />
                 <div className="text-center pt-2">
                   <h6 className="font-semibold">{shoe.name}</h6>
                   <p>${shoe.price}</p>
                 </div>
-                <button className="bg-blue-400 text-white m-7 font-bold p-3 rounded-xl cursor-pointer hover:bg-blue-500">
+                <button type="button" className="bg-blue-400 text-white m-4 font-bold p-3 rounded-xl cursor-pointer hover:bg-blue-500">
                   Add to Cart
                 </button>
               </div>
