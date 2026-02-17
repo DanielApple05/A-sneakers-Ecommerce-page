@@ -38,11 +38,11 @@ const ShopGallery = ({ sneaker }) => {
             <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} className="" onClick={() => setIsOpen(!isOpen)} />
           </div>
 
-        <div className="grid p-3  ">
-            {isOpen && ( <div className="flex items-center justify-between mb-2">
+        {!isOpen && ( <div className="grid p-3  ">
+            <div className="flex items-center justify-between mb-2">
               <h3>Brands</h3>
               <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight}  onClick={() => setIsOpen(!isOpen)} />
-            </div>)}
+            </div>
               {shoeBrands.map((brand) => (
               <div key={brand} className="flex gap-2 items-center">
                 <input
@@ -59,7 +59,7 @@ const ShopGallery = ({ sneaker }) => {
                 <span className="text-start p-2 capitalize">{brand}</span>
               </div>
             ))}
-          </div>
+          </div> )}
         </div>
           
         <div className="grid w-[80%] border-l pl-10">
