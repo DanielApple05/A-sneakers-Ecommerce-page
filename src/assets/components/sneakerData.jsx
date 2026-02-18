@@ -4,7 +4,6 @@ const Sneakers = [
     {
       id: "adidas-1",
       name: "Adidas Ultraboost 22",
-      description: "jhdj",
       price: 180,
       currency: "$",
       gender: "male",

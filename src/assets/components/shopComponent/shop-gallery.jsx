@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight, faArrowRotateLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faArrowRotateLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 
 const ShopGallery = ({ sneaker }) => {
@@ -23,6 +23,8 @@ const ShopGallery = ({ sneaker }) => {
 
   const [isOpen, setIsOpen] = useState(false);
  const [isClosed, setIsClosed] = useState(false);
+
+ const [ singleProduct, setSingleProduct ]
 
   return (
     <div className=' py-10 w-full bg-[#FDF6EC] '>
@@ -76,7 +78,7 @@ const ShopGallery = ({ sneaker }) => {
           </div>
           <div className='grid grid-cols-4 gap-6 '>
             {filteredShoes.map((shoe) => (
-              <div key={shoe.id} className="flex flex-col h-86 bg-gray-400 rounded-xl shadow-xl">
+              <div key={shoe.id} className="flex flex-col h-86 bg-gray-400 rounded-xl shadow-xl relative">
                 <img src={shoe.image} className="rounded-t-xl h-50 " />
                 <div className="text-center pt-2">
                   <h6 className="font-semibold">{shoe.name}</h6>
@@ -87,6 +89,8 @@ const ShopGallery = ({ sneaker }) => {
                 </button>
               </div>
             ))}
+
+            {}
           </div>
         </div>
       </div>
