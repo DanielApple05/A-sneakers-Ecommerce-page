@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faArrowRotateLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import SinglePage from '../singleProductPage/singleProductPage'
 
 
-const ShopGallery = ({ sneaker }) => {
+const ShopGallery = ({ sneaker, single }) => {
   const allShoes = sneaker;
   const folders = ["all", "male", "female"];
   const shoeBrands = ["adidas", "jordans", "nikeAirforce"];
@@ -24,7 +25,7 @@ const ShopGallery = ({ sneaker }) => {
   const [isOpen, setIsOpen] = useState(false);
  const [isClosed, setIsClosed] = useState(false);
 
- const [ singleProduct, setSingleProduct ]
+ const [ singleProduct, setSingleProduct ] = useState(false);
 
   return (
     <div className=' py-10 w-full bg-[#FDF6EC] '>
@@ -79,7 +80,8 @@ const ShopGallery = ({ sneaker }) => {
           <div className='grid grid-cols-4 gap-6 '>
             {filteredShoes.map((shoe) => (
               <div key={shoe.id} className="flex flex-col h-86 bg-gray-400 rounded-xl shadow-xl relative">
-                <img src={shoe.image} className="rounded-t-xl h-50 " />
+                <img src={shoe.image} className="rounded-t-xl h-50 relative" onClick={() => setSingleProduct (!singleProduct)
+                } />
                 <div className="text-center pt-2">
                   <h6 className="font-semibold">{shoe.name}</h6>
                   <p>${shoe.price}</p>
@@ -89,8 +91,11 @@ const ShopGallery = ({ sneaker }) => {
                 </button>
               </div>
             ))}
-
-            {}
+            {
+              singleProduct && (
+                  <SinglePage single = {single} ></SinglePage>
+              )
+            }
           </div>
         </div>
       </div>

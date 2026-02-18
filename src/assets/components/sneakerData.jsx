@@ -1,119 +1,140 @@
-
-
 const Sneakers = [
-    {
-      id: "adidas-1",
-      name: "Adidas Ultraboost 22",
-      price: 180,
-      currency: "$",
-      gender: "male",
-      image: "../src/assets/images/male-imgfolder/adidas-m1.png",
-      category: "running",
-      brand: "adidas",
-      imageThumbnails: [
-        'side', 'front'
-      ]
-    },
-    {
-      id: "adidas-2",
-      name: "Adidas Forum Low",
-      price: 120,
-      gender: "male",
-      image: "../src/assets/images/male-imgfolder/adidas-m2.png",
-      category: "lifestyle",
-      brand: "adidas",
-    },
-    {
-      id: "adidas-3",
-      name: "Adidas Samba",
-      price: 160,
-      gender: "female",
-      image: "../src/assets/images/female-imgfolder/adidas-1f.png",
-      category: "casual",
-      brand: "adidas",
-    },
-     {
-      id: "adidas-4",
-      name: "Adidas boost",
-      price: 145,
-      gender: "female",
-      image: "../src/assets/images/female-imgfolder/adidas-2f.png",
-      category: "casual",
-      brand: "adidas",
-    },
-    {
-      id: "jordan-1",
-      name: "Air Jordan 1 Retro High",
-      price: 200,
-      gender: "male",
-      image: "../src/assets/images/male-imgfolder/male-jordans1.png",
-      category: "basketball",
-      brand: "jordans",
-    },
-    {
-      id: "jordan-2",
-      name: "Air Jordan 4 Retro",
-      price: 220,
-      gender: "male",
-      image: "../src/assets/images/male-imgfolder/male-jordans2.png",
-      category: "basketball",
-      brand: "jordans",
-    },
-    {
-      id: "jordan-3",
-      name: "Jordan Delta",
-      price: 170,
-      gender: "female",
-      image: "../src/assets/images/female-imgfolder/jordans-f2.png",
-      category: "lifestyle",
-      brand: "jordans",
-    },
-    {
-      id: "jordan-4",
-      name: "Jordan pinky",
-      price: 160,
-      gender: "female",
-      image: "../src/assets/images/female-imgfolder/jordans-f1.png",
-      category: "lifestyle",
-      brand: "jordans",
-    },
-    {
-      id: "airforce-1",
-      name: "Nike Air Force 1 Low",
-      price: 150,
-      gender: "female",
-      image: "../src/assets/images/female-imgfolder/nike-f1.png",
-      category: "lifestyle",
-      brand: "nikeAirforce",
-    },
-    {
-      id: "airforce-2",
-      name: "Nike Air Force 1 '07",
-      price: 155,
-      gender: "male",
-      image: "../src/assets/images/male-imgfolder/nike-m1.png",
-      category: "lifestyle",
-      brand: "nikeAirforce",
-    },
-    {
-      id: "airforce-3",
-      name: "Nike Pegasus",
-      price: 140,
-      gender: "male",
-      image: "../src/assets/images/male-imgfolder/nike-m2.png",
-      category: "casual",
-      brand: "nikeAirforce",
-    },
-     {
-      id: "airforce-4",
-      name: "Nike Air Force 1 '09",
-      price: 140,
-      gender: "female",
-      image: "../src/assets/images/female-imgfolder/nike-f2.png",
-      category: "casual",
-      brand: "nikeAirforce",
-    },
+  {
+    id: "adidas-1",
+    name: "Adidas Ultraboost 22",
+    price: 180,
+    currency: "$",
+    gender: "male",
+    image: "../src/assets/images/male-imgfolder/adidas-m1.png",
+    category: "running",
+    brand: "adidas",
+    imageThumbnails: ['side', 'front'],
+    description:
+      "Performance-driven and built for comfort, the Ultraboost 22 delivers responsive cushioning with every step. Designed for runners who want energy return, stability, and sleek everyday style."
+  },
+  {
+    id: "adidas-2",
+    name: "Adidas Forum Low",
+    price: 120,
+    gender: "male",
+    image: "../src/assets/images/male-imgfolder/adidas-m2.png",
+    category: "lifestyle",
+    brand: "adidas",
+    description:
+      "A classic reimagined. The Forum Low blends retro basketball heritage with modern streetwear appeal, featuring durable materials and all-day comfort."
+  },
+  {
+    id: "adidas-3",
+    name: "Adidas Samba",
+    price: 160,
+    gender: "female",
+    image: "../src/assets/images/female-imgfolder/adidas-1f.png",
+    category: "casual",
+    brand: "adidas",
+    description:
+      "Timeless and versatile, the Samba features a sleek low-profile silhouette with premium finishing. Perfect for effortless everyday style."
+  },
+  {
+    id: "adidas-4",
+    name: "Adidas Boost",
+    price: 145,
+    gender: "female",
+    image: "../src/assets/images/female-imgfolder/adidas-2f.png",
+    category: "casual",
+    brand: "adidas",
+    description:
+      "Lightweight, supportive, and ultra-comfortable. Designed for daily movement, this Boost model delivers cushioning and sporty style."
+  },
+  {
+    id: "jordan-1",
+    name: "Air Jordan 1 Retro High",
+    price: 200,
+    gender: "male",
+    image: "../src/assets/images/male-imgfolder/male-jordans1.png",
+    category: "basketball",
+    brand: "jordans",
+    description:
+      "An icon that never fades. The Air Jordan 1 Retro High combines premium materials, bold color blocking, and legendary basketball heritage."
+  },
+  {
+    id: "jordan-2",
+    name: "Air Jordan 4 Retro",
+    price: 220,
+    gender: "male",
+    image: "../src/assets/images/male-imgfolder/male-jordans2.png",
+    category: "basketball",
+    brand: "jordans",
+    description:
+      "A statement sneaker featuring structured support, breathable panels, and classic Jordan DNA. Built for performance and bold style."
+  },
+  {
+    id: "jordan-3",
+    name: "Jordan Delta",
+    price: 170,
+    gender: "female",
+    image: "../src/assets/images/female-imgfolder/jordans-f2.png",
+    category: "lifestyle",
+    brand: "jordans",
+    description:
+      "Modern comfort meets sleek lifestyle design. The Jordan Delta offers lightweight cushioning and a streamlined silhouette for everyday wear."
+  },
+  {
+    id: "jordan-4",
+    name: "Jordan Pinky",
+    price: 160,
+    gender: "female",
+    image: "../src/assets/images/female-imgfolder/jordans-f1.png",
+    category: "lifestyle",
+    brand: "jordans",
+    description:
+      "A bold lifestyle sneaker with standout color and soft cushioning. Designed to turn heads while keeping you comfortable all day."
+  },
+  {
+    id: "airforce-1",
+    name: "Nike Air Force 1 Low",
+    price: 150,
+    gender: "female",
+    image: "../src/assets/images/female-imgfolder/nike-f1.png",
+    category: "lifestyle",
+    brand: "nikeAirforce",
+    description:
+      "A streetwear legend. The Air Force 1 Low features premium leather, clean stitching, and signature Air cushioning for timeless everyday comfort."
+  },
+  {
+    id: "airforce-2",
+    name: "Nike Air Force 1 '07",
+    price: 155,
+    gender: "male",
+    image: "../src/assets/images/male-imgfolder/nike-m1.png",
+    category: "lifestyle",
+    brand: "nikeAirforce",
+    description:
+      "A modern update to the iconic AF1. Durable, stylish, and endlessly versatile — perfect for everyday rotation."
+  },
+  {
+    id: "airforce-3",
+    name: "Nike Pegasus",
+    price: 140,
+    gender: "male",
+    image: "../src/assets/images/male-imgfolder/nike-m2.png",
+    category: "casual",
+    brand: "nikeAirforce",
+    description:
+      "Built for movement. The Pegasus combines breathable materials with responsive cushioning for comfort and performance."
+  },
+  {
+    id: "airforce-4",
+    name: "Nike Air Force 1 '09",
+    price: 140,
+    gender: "female",
+    image: "../src/assets/images/female-imgfolder/nike-f2.png",
+    category: "casual",
+    brand: "nikeAirforce",
+    description:
+      "A refined take on a classic silhouette. The Air Force 1 '09 keeps the legendary design while adding subtle modern detailing."
+  },
 ];
 
 export default Sneakers;
+
 
