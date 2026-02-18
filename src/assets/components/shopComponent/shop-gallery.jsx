@@ -26,7 +26,7 @@ const ShopGallery = ({ sneaker }) => {
 
   return (
     <div className=' py-10 w-full bg-[#FDF6EC] '>
-      <h2 className="mb-6 text-[30px] pl-20 font-bold">
+      <h2 className="mb-6 text-[30px] pl-20 font-bold relative ">
         Shop
       </h2>
       <div className="flex pr-10 justify-between ">

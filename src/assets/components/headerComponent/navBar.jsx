@@ -12,7 +12,7 @@ const navBar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className='flex justify-between px-20 bg-black/90 min-h-20'>
+    <div className='flex justify-between px-20 bg-black/90 min-h-20 max-h-25 max-w-12/12 '>
 
 
       <div className='flex items-center'>
@@ -36,11 +36,11 @@ const navBar = () => {
           ))
         }
       </div>
-      <div className="text-gray-400 flex gap-7.5 items-center">
-        <button>
+      <div className="text-gray-400 flex gap-7.5 items-center  ">
+        <button >
           <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[20px] cursor-pointer hover:text-white transition' />
         </button>
-        <CartBar />
+        <CartBar/>
         <Link to="/">
           <button>
             <FontAwesomeIcon icon={faCircleUser} className='text-[25px] cursor-pointer hover:text-white transition ' />
