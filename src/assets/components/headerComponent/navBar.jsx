@@ -3,8 +3,9 @@ import { useState } from 'react';
 import NavBtns from './navTabs';
 import SneakIcon from '../../images/sneakShop-icon.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faCircleUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import CartBar from '../cartComponent/addToCart'
 
 const navBar = () => {
 
@@ -39,9 +40,7 @@ const navBar = () => {
         <button>
           <FontAwesomeIcon icon={faMagnifyingGlass} className='text-[20px] cursor-pointer hover:text-white transition' />
         </button>
-        <button>
-          <FontAwesomeIcon icon={faCartShopping} className='text-[20px] cursor-pointer hover:text-white transition' />
-        </button>
+        <CartBar />
         <Link to="/">
           <button>
             <FontAwesomeIcon icon={faCircleUser} className='text-[25px] cursor-pointer hover:text-white transition ' />

@@ -35,12 +35,12 @@ const ShopGallery = ({ sneaker }) => {
             <h6 className=''>
               Filters
             </h6>
-            <FontAwesomeIcon icon={isClosed ? faAngleRight : faAngleDown} onClick={() => setIsClosed(!isClosed)} />
+            <FontAwesomeIcon icon={isClosed ? faAngleDown : faAngleRight}  onClick={() => setIsClosed(!isClosed)} />
           </div>
           { isClosed &&  <div className="grid p-3 ">
           <div className="flex items-center justify-between mb-2">
               <h6>Brands</h6>
-              <FontAwesomeIcon icon={isOpen ? faAngleDown : faAngleRight} onClick={() => setIsOpen(!isOpen)} />
+              <FontAwesomeIcon icon={isOpen ? faAngleRight : faAngleDown} onClick={() => setIsOpen(!isOpen)} />
             </div> 
             {!isOpen && shoeBrands.map((brand) => (
               <div key={brand} className="flex gap-2 items-center">
