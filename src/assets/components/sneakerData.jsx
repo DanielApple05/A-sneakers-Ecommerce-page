@@ -18,7 +18,7 @@ const Sneakers = [
     price: 120,
     currency: "$",
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/adidas-m2.png",
+    image: "/images/male-imgfolder/adidas-m2.png",
     category: "lifestyle",
     brand: "adidas",
     description:
@@ -42,7 +42,7 @@ const Sneakers = [
     price: 145,
     currency: "$",
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/adidas-2f.png",
+    image: "/images/female-imgfolder/adidas-2f.png",
     category: "casual",
     brand: "adidas",
     description:
@@ -54,7 +54,7 @@ const Sneakers = [
     price: 200,
     currency: "$",
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/male-jordans1.png",
+    image: "/images/male-imgfolder/male-jordans1.png",
     category: "basketball",
     brand: "jordans",
     description:
@@ -66,7 +66,7 @@ const Sneakers = [
     price: 220,
     currency: "$",
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/male-jordans2.png",
+    image: "/images/male-imgfolder/male-jordans2.png",
     category: "basketball",
     brand: "jordans",
     description:
@@ -78,7 +78,7 @@ const Sneakers = [
     price: 170,
     currency: "$",
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/jordans-f2.png",
+    image: "/images/female-imgfolder/jordans-f2.png",
     category: "lifestyle",
     brand: "jordans",
     description:
@@ -90,7 +90,7 @@ const Sneakers = [
     price: 160,
     currency: "$",
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/jordans-f1.png",
+    image: "/images/female-imgfolder/jordans-f1.png",
     category: "lifestyle",
     brand: "jordans",
     description:
@@ -102,7 +102,7 @@ const Sneakers = [
     price: 150,
     currency: "$",
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/nike-f1.png",
+    image: "/images/female-imgfolder/nike-f1.png",
     category: "lifestyle",
     brand: "nikeAirforce",
     description:
@@ -114,7 +114,7 @@ const Sneakers = [
     price: 155,
     currency: "$",
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/nike-m1.png",
+    image: "/images/male-imgfolder/nike-m1.png",
     category: "lifestyle",
     brand: "nikeAirforce",
     description:
@@ -126,7 +126,7 @@ const Sneakers = [
     price: 140,
     currency: "$",
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/nike-m2.png",
+    image: "/images/male-imgfolder/nike-m2.png",
     category: "casual",
     brand: "nikeAirforce",
     description:
@@ -138,7 +138,7 @@ const Sneakers = [
     price: 140,
     currency: "$",
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/nike-f2.png",
+    image: "/images/female-imgfolder/nike-f2.png",
     category: "casual",
     brand: "nikeAirforce",
     description:
