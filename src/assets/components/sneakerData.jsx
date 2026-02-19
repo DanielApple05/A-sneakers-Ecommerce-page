@@ -30,7 +30,7 @@ const Sneakers = [
     price: 160,
     currency: "$",
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/adidas-1f.png",
+    image: "/images/female-imgfolder/adidas-1f.png",
     category: "casual",
     brand: "adidas",
     description:

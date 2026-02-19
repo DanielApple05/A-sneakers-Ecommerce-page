@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../assets/components/headerComponent/header';
-import bgHero from '../assets/images/background-hero.png';
+import bgHero from '/images/background-hero.png';
 import '../App.css';
-import jordans_2 from '../assets/images/male-imgfolder/male-jordans2.png';
-import Jordans_f from '../assets/images/female-imgfolder/female-airforce.png';
+import jordans_2 from '/images/male-imgfolder/male-jordans2.png';
+import Jordans_f from '/images/female-imgfolder/female-airforce.png';
 import Footer from '../assets/components/footerComponent/footer'
 import Sneaker from '../assets/components/sneakerData';
 import { Link } from 'react-router-dom';
