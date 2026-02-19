@@ -5,7 +5,7 @@ const Sneakers = [
     price: 180,
     currency: "$",
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/adidas-m1.png",
+    image: "/images/male-imgfolder/adidas-m1.png",
     category: "running",
     brand: "adidas",
     imageThumbnails: ['side', 'front'],
