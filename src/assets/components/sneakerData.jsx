@@ -134,6 +134,12 @@ const Sneakers = [
     image: "/images/female-imgfolder/jordans-f1.png",
     category: "lifestyle",
     brand: "jordans",
+     imageThumbnails: [
+      "/images/female-imgfolder/jordans-f1.png", 
+      "/images/female-imgfolder/jordans-f1-topView-thumb.png",
+      "/images/female-imgfolder/jordans-f1-backView-thumb.png",
+      "/images/female-imgfolder/jordans-f1-rightView-thumb.png"
+    ],
     description:
       "A bold lifestyle sneaker with standout color and soft cushioning. Designed to turn heads while keeping you comfortable all day."
   },
@@ -164,6 +170,12 @@ const Sneakers = [
     image: "/images/male-imgfolder/nike-m1.png",
     category: "lifestyle",
     brand: "nikeAirforce",
+    imageThumbnails: [
+      "/images/male-imgfolder/nike-m1.png", 
+      "/images/male-imgfolder/nike-m1-topView-thumb.png",
+      "/images/male-imgfolder/nike-m1-backView-thumb.png",
+      "/images/male-imgfolder/nike-m1-rightView-thumb.png"
+    ],
     description:
       "A modern update to the iconic AF1. Durable, stylish, and endlessly versatile — perfect for everyday rotation."
   },
@@ -176,6 +188,12 @@ const Sneakers = [
     image: "/images/male-imgfolder/nike-m2.png",
     category: "casual",
     brand: "nikeAirforce",
+    imageThumbnails: [
+      "/images/male-imgfolder/nike-m2.png", 
+      "/images/male-imgfolder/nike-m2-topView-thumb.png",
+      "/images/male-imgfolder/nike-m2-backView-thumb.png",
+      "/images/male-imgfolder/nike-m2-rightView-thumb.png"
+    ],
     description:
       "Built for movement. The Pegasus combines breathable materials with responsive cushioning for comfort and performance."
   },
