@@ -26,6 +26,12 @@ const Sneakers = [
     image: "/images/male-imgfolder/adidas-m2.png",
     category: "lifestyle",
     brand: "adidas",
+     imageThumbnails: [
+      "/images/male-imgfolder/adidas-m2.png", 
+      "/images/male-imgfolder/adidas-m2-topView-thumb.png",
+      "/images/male-imgfolder/adidas-m2-backView-thumb.png",
+      "/images/male-imgfolder/adidas-m2-rightView-thumb.png",
+    ],
     description:
       "A classic reimagined. The Forum Low blends retro basketball heritage with modern streetwear appeal, featuring durable materials and all-day comfort."
   },
@@ -38,6 +44,12 @@ const Sneakers = [
     image: "/images/female-imgfolder/adidas-1f.png",
     category: "casual",
     brand: "adidas",
+      imageThumbnails: [
+      "/images/female-imgfolder/adidas-1f.png", 
+      "/images/female-imgfolder/adidas-1f-topView-thumb.png",
+      "/images/female-imgfolder/adidas-1f-backView-thumb.png",
+      "/images/female-imgfolder/adidas-1f-rightView-thumb.png"
+    ],
     description:
       "Timeless and versatile, the Samba features a sleek low-profile silhouette with premium finishing. Perfect for effortless everyday style."
   },
@@ -50,6 +62,12 @@ const Sneakers = [
     image: "/images/female-imgfolder/adidas-2f.png",
     category: "casual",
     brand: "adidas",
+      imageThumbnails: [
+      "/images/female-imgfolder/adidas-2f.png", 
+      "/images/female-imgfolder/adidas-2f-topView-thumb.png",
+      "/images/female-imgfolder/adidas-2f-backView-thumb.png",
+      "/images/female-imgfolder/adidas-2f-rightView-thumb.png"
+    ],
     description:
       "Lightweight, supportive, and ultra-comfortable. Designed for daily movement, this Boost model delivers cushioning and sporty style."
   },
@@ -62,6 +80,12 @@ const Sneakers = [
     image: "/images/male-imgfolder/male-jordans1.png",
     category: "basketball",
     brand: "jordans",
+      imageThumbnails: [
+      "/images/male-imgfolder/male-jordans1.png", 
+      "/images/male-imgfolder/male-jordans1-topView-thumb.png",
+      "/images/male-imgfolder/male-jordans1-backView-thumb.png",
+      "/images/male-imgfolder/male-jordans1-rightView-thumb.png",
+    ],
     description:
       "An icon that never fades. The Air Jordan 1 Retro High combines premium materials, bold color blocking, and legendary basketball heritage."
   },
@@ -74,6 +98,12 @@ const Sneakers = [
     image: "/images/male-imgfolder/male-jordans2.png",
     category: "basketball",
     brand: "jordans",
+    imageThumbnails: [
+      "/images/male-imgfolder/male-jordans2.png", 
+      "/images/male-imgfolder/male-jordans2-topView-thumb.avif",
+      "/images/male-imgfolder/male-jordans2-backView-thumb.avif",
+      "/images/male-imgfolder/male-jordans2-rightView-thumb.avif"
+    ],
     description:
       "A statement sneaker featuring structured support, breathable panels, and classic Jordan DNA. Built for performance and bold style."
   },
@@ -86,6 +116,12 @@ const Sneakers = [
     image: "/images/female-imgfolder/jordans-f2.png",
     category: "lifestyle",
     brand: "jordans",
+    imageThumbnails: [
+      "/images/female-imgfolder/jordans-f2.png", 
+      "/images/female-imgfolder/jordans-f2-topView-thumb.png",
+      "/images/female-imgfolder/jordans-f2-backView-thumb.png",
+      "/images/female-imgfolder/jordans-f2-rightView-thumb.png"
+    ],
     description:
       "Modern comfort meets sleek lifestyle design. The Jordan Delta offers lightweight cushioning and a streamlined silhouette for everyday wear."
   },
@@ -110,6 +146,12 @@ const Sneakers = [
     image: "/images/female-imgfolder/nike-f1.png",
     category: "lifestyle",
     brand: "nikeAirforce",
+     imageThumbnails: [
+      "/images/female-imgfolder/nike-f1.png", 
+      "/images/female-imgfolder/nike-f1-topView-thumb.png",
+      "/images/female-imgfolder/nike-f1-backView-thumb.png",
+      "/images/female-imgfolder/nike-f1-rightView-thumb.png"
+    ],
     description:
       "A streetwear legend. The Air Force 1 Low features premium leather, clean stitching, and signature Air cushioning for timeless everyday comfort."
   },
