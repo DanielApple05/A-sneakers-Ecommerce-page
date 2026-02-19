@@ -5,7 +5,7 @@ const Sneakers = [
     price: 180,
     currency: "$",
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/adidas-m1.png",
+    image: "../assets/images/male-imgfolder/adidas-m1.png",
     category: "running",
     brand: "adidas",
     imageThumbnails: ['side', 'front'],
@@ -17,7 +17,7 @@ const Sneakers = [
     name: "Adidas Forum Low",
     price: 120,
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/adidas-m2.png",
+    image: "../assets/images/male-imgfolder/adidas-m2.png",
     category: "lifestyle",
     brand: "adidas",
     description:
@@ -28,7 +28,7 @@ const Sneakers = [
     name: "Adidas Samba",
     price: 160,
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/adidas-1f.png",
+    image: "../assets/images/female-imgfolder/adidas-1f.png",
     category: "casual",
     brand: "adidas",
     description:
@@ -39,7 +39,7 @@ const Sneakers = [
     name: "Adidas Boost",
     price: 145,
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/adidas-2f.png",
+    image: "../assets/images/female-imgfolder/adidas-2f.png",
     category: "casual",
     brand: "adidas",
     description:
@@ -50,7 +50,7 @@ const Sneakers = [
     name: "Air Jordan 1 Retro High",
     price: 200,
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/male-jordans1.png",
+    image: "../assets/images/male-imgfolder/male-jordans1.png",
     category: "basketball",
     brand: "jordans",
     description:
@@ -61,7 +61,7 @@ const Sneakers = [
     name: "Air Jordan 4 Retro",
     price: 220,
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/male-jordans2.png",
+    image: "../assets/images/male-imgfolder/male-jordans2.png",
     category: "basketball",
     brand: "jordans",
     description:
@@ -72,7 +72,7 @@ const Sneakers = [
     name: "Jordan Delta",
     price: 170,
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/jordans-f2.png",
+    image: "../assets/images/female-imgfolder/jordans-f2.png",
     category: "lifestyle",
     brand: "jordans",
     description:
@@ -83,7 +83,7 @@ const Sneakers = [
     name: "Jordan Pinky",
     price: 160,
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/jordans-f1.png",
+    image: "../assets/images/female-imgfolder/jordans-f1.png",
     category: "lifestyle",
     brand: "jordans",
     description:
@@ -94,7 +94,7 @@ const Sneakers = [
     name: "Nike Air Force 1 Low",
     price: 150,
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/nike-f1.png",
+    image: "../assets/images/female-imgfolder/nike-f1.png",
     category: "lifestyle",
     brand: "nikeAirforce",
     description:
@@ -105,7 +105,7 @@ const Sneakers = [
     name: "Nike Air Force 1 '07",
     price: 155,
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/nike-m1.png",
+    image: "../assets/images/male-imgfolder/nike-m1.png",
     category: "lifestyle",
     brand: "nikeAirforce",
     description:
@@ -116,7 +116,7 @@ const Sneakers = [
     name: "Nike Pegasus",
     price: 140,
     gender: "male",
-    image: "../src/assets/images/male-imgfolder/nike-m2.png",
+    image: "../assets/images/male-imgfolder/nike-m2.png",
     category: "casual",
     brand: "nikeAirforce",
     description:
@@ -127,7 +127,7 @@ const Sneakers = [
     name: "Nike Air Force 1 '09",
     price: 140,
     gender: "female",
-    image: "../src/assets/images/female-imgfolder/nike-f2.png",
+    image: "../assets/images/female-imgfolder/nike-f2.png",
     category: "casual",
     brand: "nikeAirforce",
     description:

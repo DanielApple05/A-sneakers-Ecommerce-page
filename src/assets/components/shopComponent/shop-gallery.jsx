@@ -81,10 +81,8 @@ const ShopGallery = ({ sneaker }) => {
           <div className='grid grid-cols-4 gap-6 '>
             {filteredShoes.map((shoe) => (
               <div key={shoe.id} className="flex flex-col h-86 bg-gray-400 rounded-xl shadow-xl relative">
-               <Link
-                to={`/product/${sneaker.id}`}
-              > <img src={shoe.image} className="rounded-t-xl h-50 relative" onClick={() => setSingleProduct(!singleProduct)
-                } /> </Link>
+               <Link to={`/product/${sneaker.id}`}
+              > <img src={shoe.image} className="rounded-t-xl h-50 relative" /> </Link>
                 <div className="text-center pt-2">
                   <h6 className="font-semibold">{shoe.name}</h6>
                   <p>${shoe.price}</p>
@@ -94,10 +92,6 @@ const ShopGallery = ({ sneaker }) => {
                 </button>
               </div>
             ))}
-            {
-              !singleProduct && (
-                <SinglePage/>
-              )}
           </div>
         </div>
       </div>
