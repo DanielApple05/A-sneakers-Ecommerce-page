@@ -188,6 +188,12 @@ const Sneakers = [
     image: "/images/female-imgfolder/nike-f2.png",
     category: "casual",
     brand: "nikeAirforce",
+     imageThumbnails: [
+      "/images/female-imgfolder/nike-f2.png", 
+      "/images/female-imgfolder/nike-f2-topView-thumb.png",
+      "/images/female-imgfolder/nike-f2-backView-thumb.png",
+      "/images/female-imgfolder/nike-f2-rightView-thumb.png"
+    ],
     description:
       "A refined take on a classic silhouette. The Air Force 1 '09 keeps the legendary design while adding subtle modern detailing."
   },
