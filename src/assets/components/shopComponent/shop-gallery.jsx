@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faArrowRotateLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import SinglePage from '../singleProductPage/singleProductPage'
+import SinglePage from '../singleProductPage/singleProductPage';
+import { Link } from "react-router-dom";
 
 
-const ShopGallery = ({ sneaker, single }) => {
+const ShopGallery = ({ sneaker }) => {
   const allShoes = sneaker;
   const folders = ["all", "male", "female"];
   const shoeBrands = ["adidas", "jordans", "nikeAirforce"];
@@ -23,9 +24,9 @@ const ShopGallery = ({ sneaker, single }) => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
- const [isClosed, setIsClosed] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
 
- const [ singleProduct, setSingleProduct ] = useState(false);
+  const [singleProduct, setSingleProduct] = useState(false);
 
   return (
     <div className=' py-10 w-full bg-[#FDF6EC] '>
@@ -38,13 +39,13 @@ const ShopGallery = ({ sneaker, single }) => {
             <h6 className=''>
               Filters
             </h6>
-            <FontAwesomeIcon icon={isClosed ? faAngleDown : faAngleRight}  onClick={() => setIsClosed(!isClosed)} />
+            <FontAwesomeIcon icon={isClosed ? faAngleDown : faAngleRight} onClick={() => setIsClosed(!isClosed)} />
           </div>
-          { isClosed &&  <div className="grid p-3 ">
-          <div className="flex items-center justify-between mb-2">
+          {isClosed && <div className="grid p-3 ">
+            <div className="flex items-center justify-between mb-2">
               <h6>Brands</h6>
               <FontAwesomeIcon icon={isOpen ? faAngleRight : faAngleDown} onClick={() => setIsOpen(!isOpen)} />
-            </div> 
+            </div>
             {!isOpen && shoeBrands.map((brand) => (
               <div key={brand} className="flex gap-2 items-center">
                 <input
@@ -62,7 +63,7 @@ const ShopGallery = ({ sneaker, single }) => {
               </div>
             ))}
           </div>}
-        </div> 
+        </div>
 
         <div className="grid w-[80%] border-l pl-10">
           <div className="flex justify-between ">
@@ -80,8 +81,10 @@ const ShopGallery = ({ sneaker, single }) => {
           <div className='grid grid-cols-4 gap-6 '>
             {filteredShoes.map((shoe) => (
               <div key={shoe.id} className="flex flex-col h-86 bg-gray-400 rounded-xl shadow-xl relative">
-                <img src={shoe.image} className="rounded-t-xl h-50 relative" onClick={() => setSingleProduct (!singleProduct)
-                } />
+               <Link
+                to={`/product/${sneaker.id}`}
+              > <img src={shoe.image} className="rounded-t-xl h-50 relative" onClick={() => setSingleProduct(!singleProduct)
+                } /> </Link>
                 <div className="text-center pt-2">
                   <h6 className="font-semibold">{shoe.name}</h6>
                   <p>${shoe.price}</p>
@@ -92,10 +95,9 @@ const ShopGallery = ({ sneaker, single }) => {
               </div>
             ))}
             {
-              singleProduct && (
-                  <SinglePage single = {single} ></SinglePage>
-              )
-            }
+              !singleProduct && (
+                <SinglePage/>
+              )}
           </div>
         </div>
       </div>
