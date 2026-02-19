@@ -5,18 +5,15 @@ import SignUp from './assets/components/signUp/signIn';
 import SingleProductPage from './assets/components/singleProductPage/singleProductPage';
 
 const App = () => {
-  
   return (
     <Routes>
       <Route path="/" element={<SignUp />} />
-      <Route>
-        <Route path="/index" element={<Index />} />
-        <Route path="/shop" element={<Shop />} />
-      </Route>
-    <Route path="/product/:id" element={<SingleProductPage />} />
+      <Route path="/index" element={<Index />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/product/:id" element={<SingleProductPage />} />
     </Routes>
   );
-}
+};
 
 export default App;
 
