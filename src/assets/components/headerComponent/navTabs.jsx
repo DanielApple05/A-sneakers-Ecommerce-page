@@ -4,7 +4,7 @@ const navTabs =  [
 
 { tab: "Home",  path: "/index"},
 { tab: "Shop",  path: "/shop"},
-{ tab: "Brands"},
+{ tab: "Contact"},
 { tab: "Collections"},
 { tab: "Blog"},
 

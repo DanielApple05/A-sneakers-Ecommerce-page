@@ -8,7 +8,12 @@ const Sneakers = [
     image: "/images/male-imgfolder/adidas-m1.png",
     category: "running",
     brand: "adidas",
-    imageThumbnails: ['side', 'front'],
+    imageThumbnails: [
+      "/images/male-imgfolder/adidas-m1.png", 
+      "/images/male-imgfolder/adidas-m1-topView-thumb.png",
+      "/images/male-imgfolder/adidas-m1-backView-thumb.png",
+       "/images/male-imgfolder/adidas-m1-rightView-thumb.png"
+    ],
     description:
       "Performance-driven and built for comfort, the Ultraboost 22 delivers responsive cushioning with every step. Designed for runners who want energy return, stability, and sleek everyday style."
   },
