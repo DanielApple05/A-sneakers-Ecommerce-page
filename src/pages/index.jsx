@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../assets/components/headerComponent/header';
 import bgHero from '/images/background-hero.png';
 import '../App.css';
@@ -9,7 +8,7 @@ import Sneaker from '../assets/components/sneakerData';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  const sneaker = [Sneaker[(0)], Sneaker[(7)], Sneaker[(8)], Sneaker[3]]
+  
   return (
     <div className="min-h-screen">
       <div className="sticky top-0 shadow-xl z-50">
@@ -43,9 +42,9 @@ const Index = () => {
           Best Sellers
         </h3>
         <div className='flex w-full gap-10 mt-4'>
-          {sneaker.map((shoe) => (
+          {Sneaker.slice(1,5).map((shoe) => (
             <div key={shoe.id} className="w-[25%] bg-gray-400 grid rounded-xl text-lg">
-              <div>
+             <div>
                 <img src={shoe.image} alt={shoe.name} className="rounded-t-xl h-full " />
               </div>
               <div className="grid justify-center text-center pt-2">
