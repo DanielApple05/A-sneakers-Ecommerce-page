@@ -56,7 +56,7 @@ const Index = () => {
           ))}
         </div>
         <div className='flex w-full justify-between  my-10 gap-10 h-100'>
-          <div className='w-[50%] relative '>
+          <div className='w-[50%] relative h-3/4 '>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />
 
             <div className="absolute top-5 left-10 font-semibold space-y-1">

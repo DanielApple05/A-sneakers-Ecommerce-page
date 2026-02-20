@@ -14,6 +14,7 @@ const SingleProductPage = () => {
     return <p className="p-4 text-red-500">Sneaker not found!</p>;
   }
   const [mainImage, setMainImage] = useState(sneaker.image);
+  // const [ activeThumb, setActiveThumb] = useState()
 
   return (
     <div className="">
@@ -21,18 +22,17 @@ const SingleProductPage = () => {
       <div>
         <div className="max-w-2xl mx-auto bg-[#f5d19f] p-6 shadow-lg my-10 rounded text-gray-700">
           <div className="flex gap-x-5">
-            <div className="w-12/12">
+            <div className="w-full">
               <div>
-                <img src={mainImage} alt={sneaker.name} className="w-full mb-4 rounded " />
+                <img src={mainImage} alt={sneaker.name} className="w-full mb-4 rounded"/>
               </div>
               <div className="flex justify-between">
                 {sneaker.imageThumbnails.map((thumb, idx) => (
-                  <div className="">
+                  <div key={idx}>
                     <img
-                      key={idx}
                       src={thumb}
                       alt={`Thumbnail ${idx}`}
-                      className="w-15 h-15 object-cover rounded-lg cursor-pointer hover:border-2 border-black"
+                      className={`w-16 h-16 object-cover rounded-lg cursor-pointer  hover:border-2 ${ mainImage == thumb ? "border-2" : "" }`}
                       onClick={() => setMainImage(thumb)}
                     />
                   </div>
@@ -71,10 +71,10 @@ const SingleProductPage = () => {
                 <div key={id} className="bg-amber-100 space-y-4 pb-2 rounded-xl">
                   <Link to="/shop">
                     <div >
-                      <img src={sneaks.image} alt="" className="h-50 rounded-t-xl cursor-pointer w-50" />
+                      <img src={sneaks.image} alt="" className="h-50 rounded-t-xl cursor-pointer w-full" />
                     </div>
                   </Link>
-                  <div className="font-semibold">
+                  <div className="font-semibold m-3">
                     <p> {sneaks.name}</p>
                     <h4>{sneaks.currency}{sneaks.price}</h4>
                   </div>
