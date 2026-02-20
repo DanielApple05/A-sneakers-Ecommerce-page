@@ -82,7 +82,7 @@ const ShopGallery = ({ sneaker }) => {
             {filteredShoes.map((shoe) => (
               <div key={shoe.id} className="flex flex-col h-86 bg-gray-400 rounded-xl shadow-xl relative">
                 <Link to={`/product/${shoe.id}`}>
-                  <img src={shoe.image} className="rounded-t-xl relative" /> </Link>
+                  <img src={shoe.image} className="rounded-t-xl relative w-full h-50" /> </Link>
                 <div className="text-center pt-2">
                   <h6 className="font-semibold">{shoe.name}</h6>
                   <p>${shoe.price}</p>

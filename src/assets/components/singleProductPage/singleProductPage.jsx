@@ -63,16 +63,17 @@ const SingleProductPage = () => {
             </div>
           </div>
         </div>
-        <div className=" text-center space-y-7 border-t-2 border-gray-500 py-7 ">
+        <div className=" text-center space-y-7 border-gray-500 py-7 border-y-2 mb-4 ">
           <h3 className="font-bold"> Related Products</h3>
           <div className="flex gap-x-7 items-center justify-center">
             {
-              Sneakers.slice(1, 5).map((sneaks) => (
+              Sneakers.slice(0, 5).map((sneaks) => (
                 <div key={id} className="bg-amber-100 space-y-4 pb-2 rounded-xl">
                   <Link to="/shop">
                     <div >
-                      <img src={sneaks.image} alt="" className="h-50 rounded-t-xl cursor-pointer" />
-                    </div></Link>
+                      <img src={sneaks.image} alt="" className="h-50 rounded-t-xl cursor-pointer w-50" />
+                    </div>
+                  </Link>
                   <div className="font-semibold">
                     <p> {sneaks.name}</p>
                     <h4>{sneaks.currency}{sneaks.price}</h4>
