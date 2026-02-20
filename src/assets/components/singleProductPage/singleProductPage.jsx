@@ -24,7 +24,7 @@ const SingleProductPage = () => {
           <div className="flex gap-x-5">
             <div className="w-full">
               <div>
-                <img src={mainImage} alt={sneaker.name} className="w-full mb-4 rounded"/>
+                <img src={mainImage} alt={sneaker.name} className="w-full mb-4 rounded-xl  transition-opacity duration-300 "/>
               </div>
               <div className="flex justify-between">
                 {sneaker.imageThumbnails.map((thumb, idx) => (
