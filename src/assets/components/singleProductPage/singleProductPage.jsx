@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Sneakers from "../sneakerData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -17,9 +17,9 @@ const SingleProductPage = () => {
 
   return (
     <div className="">
-      <Header/>
+      <Header />
       <div>
-        <div className="max-w-2xl mx-auto bg-[#f5d19f] p-6 shadow-lg my-10 rounded text-gray-700 ">
+        <div className="max-w-2xl mx-auto bg-[#f5d19f] p-6 shadow-lg my-10 rounded text-gray-700">
           <div className="flex gap-x-5">
             <div className="w-12/12">
               <div>
@@ -63,16 +63,28 @@ const SingleProductPage = () => {
             </div>
           </div>
         </div>
-          <div>
-          <div className="flex">
+        <div className=" text-center space-y-7 border-t-2 border-gray-500 py-7 ">
+          <h3 className="font-bold"> Related Products</h3>
+          <div className="flex gap-x-7 items-center justify-center">
             {
-              Sneakers.slice(1,5).map((sneaks) => ( 
-                <div key={id}>
-                  <img src={sneaks.image} alt="" />
+              Sneakers.slice(1, 5).map((sneaks) => (
+                <div key={id} className="bg-amber-100 space-y-4 pb-2 rounded-xl">
+                  <div >
+                    <img src={sneaks.image} alt="" className="h-50 rounded-t-xl" />
+                  </div>
+                  <div className="font-semibold">
+                    <p> {sneaks.name}</p>
+                    <h4>{sneaks.currency}{sneaks.price}</h4>
+                  </div>
                 </div>
               ))
             }
           </div>
+          <Link to="/shop">          
+          <button className="border-2 border-amber-200 p-2 bg-amber-100 cursor-pointer  hover:bg-[#f5d19f] ">
+            Show More
+          </button> </Link>
+
         </div>
       </div>
       <Footer></Footer>
