@@ -16,8 +16,8 @@ const SingleProductPage = () => {
   const [mainImage, setMainImage] = useState(sneaker.image);
 
   return (
-    <div >
-      <Header></Header>
+    <div className="">
+      <Header/>
       <div>
         <div className="max-w-2xl mx-auto bg-[#f5d19f] p-6 shadow-lg my-10 rounded text-gray-700 ">
           <div className="flex gap-x-5">

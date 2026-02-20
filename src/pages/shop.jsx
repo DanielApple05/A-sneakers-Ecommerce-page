@@ -7,9 +7,7 @@ import Footer from '../assets/components/footerComponent/footer'
 const shop = () => {
   return (
     <div>
-      <div className="sticky top-0 shadow-xl z-50">
-        <Header/>
-      </div>
+      <Header/>
       <ShopGallery sneaker={Sneakers} />
       <Footer/>
     </div>

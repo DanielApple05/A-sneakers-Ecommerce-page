@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from '../assets/components/headerComponent/header';
 import bgHero from '/images/background-hero.png';
 import '../App.css';
@@ -8,7 +9,6 @@ import Sneaker from '../assets/components/sneakerData';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
-  
   return (
     <div className="min-h-screen">
       <div className="sticky top-0 shadow-xl z-50">
@@ -42,11 +42,11 @@ const Index = () => {
           Best Sellers
         </h3>
         <div className='flex w-full gap-10 mt-4'>
-          {Sneaker.slice(1,5).map((shoe) => (
+          {Sneaker.slice(2,6).map((shoe) => (
             <div key={shoe.id} className="w-[25%] bg-gray-400 grid rounded-xl text-lg">
-             <div>
+            <Link to={`/product/${shoe.id}`}> <div>
                 <img src={shoe.image} alt={shoe.name} className="rounded-t-xl h-full " />
-              </div>
+              </div> </Link>
               <div className="grid justify-center text-center pt-2">
                 <h6 className='font-semibold'>{shoe.name}</h6>
                 <p className='text-[18px]'>${shoe.price}</p>
