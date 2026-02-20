@@ -69,9 +69,10 @@ const SingleProductPage = () => {
             {
               Sneakers.slice(1, 5).map((sneaks) => (
                 <div key={id} className="bg-amber-100 space-y-4 pb-2 rounded-xl">
-                  <Link to={`/shop/${sneaks.id}`}> <div >
-                    <img src={sneaks.image} alt="" className="h-50 rounded-t-xl cursor-pointer" />
-                  </div></Link>
+                  <Link to="/shop">
+                    <div >
+                      <img src={sneaks.image} alt="" className="h-50 rounded-t-xl cursor-pointer" />
+                    </div></Link>
                   <div className="font-semibold">
                     <p> {sneaks.name}</p>
                     <h4>{sneaks.currency}{sneaks.price}</h4>
