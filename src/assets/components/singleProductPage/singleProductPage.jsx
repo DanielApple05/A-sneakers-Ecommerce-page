@@ -41,7 +41,7 @@ const SingleProductPage = () => {
             </div>
             <div className="text-[12px] w-12/12 grid mr-5">
               <h2 className="text-2xl font-bold">{sneaker.name}</h2>
-              <p className=" capitalize">{sneaker.brand}</p>
+              <h3 className=" font-medium capitalize">{sneaker.brand}</h3>
               <p className="">{sneaker.description}</p>
               <p className="text-lg font-semibold">{sneaker.currency}{sneaker.price}</p>
               <div className="flex justify-between">
@@ -69,9 +69,9 @@ const SingleProductPage = () => {
             {
               Sneakers.slice(1, 5).map((sneaks) => (
                 <div key={id} className="bg-amber-100 space-y-4 pb-2 rounded-xl">
-                  <div >
-                    <img src={sneaks.image} alt="" className="h-50 rounded-t-xl" />
-                  </div>
+                  <Link to={`/shop/${sneaks.id}`}> <div >
+                    <img src={sneaks.image} alt="" className="h-50 rounded-t-xl cursor-pointer" />
+                  </div></Link>
                   <div className="font-semibold">
                     <p> {sneaks.name}</p>
                     <h4>{sneaks.currency}{sneaks.price}</h4>
@@ -80,10 +80,10 @@ const SingleProductPage = () => {
               ))
             }
           </div>
-          <Link to="/shop">          
-          <button className="border-2 border-amber-200 p-2 bg-amber-100 cursor-pointer  hover:bg-[#f5d19f] ">
-            Show More
-          </button> </Link>
+          <Link to="/shop">
+            <button className="border-2 border-amber-200 p-2 bg-amber-100 cursor-pointer  hover:bg-[#f5d19f] hover:border-black hover:font-medium ">
+              Show More
+            </button> </Link>
 
         </div>
       </div>

@@ -11,9 +11,7 @@ import { Link } from 'react-router-dom';
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <div className="sticky top-0 shadow-xl z-50">
         <Header />
-      </div>
       <section className="relative h-screen">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-b-4xl"

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const ShopGallery = ({ sneaker }) => {
+
   const allShoes = sneaker;
   const folders = ["all", "male", "female"];
   const shoeBrands = ["adidas", "jordans", "nikeAirforce"];
