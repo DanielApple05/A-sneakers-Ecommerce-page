@@ -28,7 +28,6 @@ const FooterNavs = () => {
     <div className="bg-zinc-900 py-12.5 text-gray-400 ">
       <div className="border-b " >
         <div className=" flex justify-between px-20 pb-15">
-
           <div className="grid grid-cols-2 gap-y-6 gap-x-15">
             {FtNavBtns.links.map((link, index) => (
               <h6 key={index} className="cursor-pointer hover:text-white transition">
@@ -44,7 +43,6 @@ const FooterNavs = () => {
               ))}
             </div>
           </div>
-
           <div className=" grid w-[30%] ">
             <h6>
               Subscribe To Our Newsletter

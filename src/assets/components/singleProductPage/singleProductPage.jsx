@@ -14,7 +14,8 @@ const SingleProductPage = () => {
     return <p className="p-4 text-red-500">Sneaker not found!</p>;
   }
   const [mainImage, setMainImage] = useState(sneaker.image);
-  // const [ activeThumb, setActiveThumb] = useState()
+  // const [price, setPrice] = useState(sneaker.price);
+  const [quantity, setQuantity] = useState(0);
 
   return (
     <div className="">
@@ -27,11 +28,11 @@ const SingleProductPage = () => {
                 <img src={mainImage} alt={sneaker.name} className="w-full mb-4 rounded-xl  transition-opacity duration-300 "/>
               </div>
               <div className="flex justify-between">
-                {sneaker.imageThumbnails.map((thumb, idx) => (
-                  <div key={idx}>
+                {sneaker.imageThumbnails.map((thumb, id) => (
+                  <div key={thumb}>
                     <img
                       src={thumb}
-                      alt={`Thumbnail ${idx}`}
+                      alt={`Thumbnail ${id}`}
                       className={`w-16 h-16 object-cover rounded-lg cursor-pointer  hover:border-2 ${ mainImage == thumb ? "border-2" : "" }`}
                       onClick={() => setMainImage(thumb)}
                     />
@@ -40,15 +41,15 @@ const SingleProductPage = () => {
               </div>
             </div>
             <div className="text-[12px] w-12/12 grid mr-5">
-              <h2 className="text-2xl font-bold">{sneaker.name}</h2>
+              <ul> <li className="text-2xl font-bold">{sneaker.name}</li> </ul>
               <h3 className=" font-medium capitalize">{sneaker.brand}</h3>
               <p className="">{sneaker.description}</p>
-              <p className="text-lg font-semibold">{sneaker.currency}{sneaker.price}</p>
+              <p className="text-lg font-semibold ">{sneaker.currency}{sneaker.price}</p>
               <div className="flex justify-between">
                 <div className=" h-8  w-20 flex justify-between font-bold text-sm cursor-pointer">
-                  <span className="bg-gray-300 rounded border border-gray-200 px-2 py-1">-</span>
-                  <span className="rounded border border-gray-200 px-2  py-1">1</span>
-                  <span className="bg-gray-300 px-2 py-1 rounded border border-gray-200">+</span>
+                  <button onClick={() => setQuantity( quantity -1) } className="bg-gray-300 rounded border border-gray-200 px-2 py-1">-</button>
+                  <span className="rounded border border-gray-200 px-2  py-1">{quantity}</span>
+                  <button onClick={() => setQuantity( quantity + 1 ) } className="bg-gray-300 px-2 py-1 rounded border border-gray-200">+</button>
                 </div>
                 <div className=" mr-2">
                   <button className="cursor-pointer text-xl pb-1">
