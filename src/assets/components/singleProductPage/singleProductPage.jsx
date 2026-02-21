@@ -29,7 +29,7 @@ const SingleProductPage = () => {
               </div>
               <div className="flex justify-between">
                 {sneaker.imageThumbnails.map((thumb, id) => (
-                  <div key={thumb}>
+                  <div key={id}>
                     <img
                       src={thumb}
                       alt={`Thumbnail ${id}`}
@@ -47,7 +47,7 @@ const SingleProductPage = () => {
               <p className="text-lg font-semibold ">{sneaker.currency}{sneaker.price}</p>
               <div className="flex justify-between">
                 <div className=" h-8  w-20 flex justify-between font-bold text-sm cursor-pointer">
-                  <button onClick={() => setQuantity( quantity -1) } className="bg-gray-300 rounded border border-gray-200 px-2 py-1">-</button>
+                  <button onClick={() => setQuantity( quantity - 1 ) } className="bg-gray-300 rounded border border-gray-200 px-2 py-1">-</button>
                   <span className="rounded border border-gray-200 px-2  py-1">{quantity}</span>
                   <button onClick={() => setQuantity( quantity + 1 ) } className="bg-gray-300 px-2 py-1 rounded border border-gray-200">+</button>
                 </div>
@@ -68,7 +68,7 @@ const SingleProductPage = () => {
           <h3 className="font-bold"> Related Products</h3>
           <div className="flex gap-x-7 items-center justify-center">
             {
-              Sneakers.slice(0, 5).map((sneaks) => (
+              Sneakers.slice(0, 5).map((sneaks, id) => (
                 <div key={id} className="bg-amber-100 space-y-4 pb-2 rounded-xl">
                   <Link to="/shop">
                     <div >
