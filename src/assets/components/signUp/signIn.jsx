@@ -1,10 +1,9 @@
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faLock, faAnchorLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
 import SignUpBgIcon from '../../images/signUpBg.png'
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-
 
 const signIn = () => {
   const navigate = useNavigate();
@@ -45,7 +44,6 @@ const signIn = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      console.log("Form submitted successfully");
       navigate('/index')
     }
   };

@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 
 const ShopGallery = ({ sneaker }) => {
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
+  const [selectedBrands, setSelectedBrands] = useState([]);
+  const [activeFilter, setActiveFilter] = useState("all");
   const allShoes = sneaker;
   const folders = ["all", "male", "female"];
   const shoeBrands = ["adidas", "jordans", "nikeAirforce"];
-  const [activeFilter, setActiveFilter] = useState("all");
-  const [selectedBrands, setSelectedBrands] = useState([]);
   const filteredShoes = allShoes.filter((shoe) => {
     const genderMatch =
       activeFilter === "all" || shoe.gender === activeFilter;
@@ -22,11 +23,6 @@ const ShopGallery = ({ sneaker }) => {
     setActiveFilter("all");
     setSelectedBrands([]);
   };
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isClosed, setIsClosed] = useState(false);
-
-  // const [singleProduct, setSingleProduct] = useState(false);
 
   return (
     <div className=' py-10 w-full bg-[#FDF6EC] '>

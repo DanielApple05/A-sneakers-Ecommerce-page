@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Sneakers from "../sneakerData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Header from '../headerComponent/header';
 import Footer from '../footerComponent/footer'
-import { useState } from "react";
 
 const SingleProductPage = () => {
   const { id } = useParams(); // grab the sneaker id from the route

@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FtNavBtns from "./footerTab";
-import { useState } from "react";
+
 
 const FooterNavs = () => {
   const [email, setEmail] = useState("");
