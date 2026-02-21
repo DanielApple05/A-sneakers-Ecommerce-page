@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Sneakers from "../sneakerData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,8 +14,21 @@ const SingleProductPage = () => {
     return <p className="p-4 text-red-500">Sneaker not found!</p>;
   }
   const [mainImage, setMainImage] = useState(sneaker.image);
-  // const [price, setPrice] = useState(sneaker.price);
+  const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(0);
+
+ const addValue = () => {
+  setQuantity(prev => prev + 1);
+};
+
+const subValue = () => {
+  setQuantity(prev => (prev > 0 ? prev - 1 : 0));
+};
+
+useEffect(() => {
+  setTotal(sneaker.price * quantity);
+}, [quantity, sneaker.price]);
+
 
   return (
     <div className="">
@@ -44,16 +57,20 @@ const SingleProductPage = () => {
               <ul> <li className="text-2xl font-bold">{sneaker.name}</li> </ul>
               <h3 className=" font-medium capitalize">{sneaker.brand}</h3>
               <p className="">{sneaker.description}</p>
-              <p className="text-lg font-semibold ">{sneaker.currency}{sneaker.price}</p>
-              <div className="flex justify-between">
-                <div className=" h-8  w-20 flex justify-between font-bold text-sm cursor-pointer">
-                  <button onClick={() => setQuantity( quantity - 1 ) } className="bg-gray-300 rounded border border-gray-200 px-2 py-1">-</button>
-                  <span className="rounded border border-gray-200 px-2  py-1">{quantity}</span>
-                  <button onClick={() => setQuantity( quantity + 1 ) } className="bg-gray-300 px-2 py-1 rounded border border-gray-200">+</button>
+              <p className="text-lg font-semibold ">{sneaker.currency} {sneaker.price}</p>
+              <div className="flex justify-between items-center">
+                <div className=" h-8  w-20 flex justify-between font-bold text-sm cursor-pointer gap-x-0.5">
+                  <button onClick={subValue} className="bg-gray-300 rounded border border-gray-200 w-10 ">-</button>
+                  <span className="rounded border border-gray-200 flex items-center justify-center w-10">{quantity}</span>
+                  <button onClick={addValue} className="bg-gray-300 w-10 rounded border border-gray-200 ">+</button>
                 </div>
-                <div className=" mr-2">
-                  <button className="cursor-pointer text-xl pb-1">
-                    <FontAwesomeIcon icon={faCartShopping} />
+                <div className=" mr-2 bg-amber-400 flex rounded-xl items-center justify-between p-1 gap-x-3 cursor-pointer">
+                  <p >
+                    Add to cart
+                  </p>
+                  <button className="cursor-pointer text-xl relative ">
+                    <FontAwesomeIcon icon={faCartShopping}   className=" text-gray-600"/>
+                     <span className="absolute top-0 left-0 text-sm font-semibold text-green-400 ">{quantity}</span>  
                   </button>
                 </div>
               </div>
