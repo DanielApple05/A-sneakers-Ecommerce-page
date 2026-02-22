@@ -2,9 +2,13 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faArrowRotateLeft, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useCart } from "../../../context/cartContext";
 
 
 const ShopGallery = ({ sneaker }) => {
+  const { cartItems } = useCart();
+  console.log(cartItems);
+
   const [isOpen, setIsOpen] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
   const [selectedBrands, setSelectedBrands] = useState([]);

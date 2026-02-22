@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Header from '../headerComponent/header';
 import Footer from '../footerComponent/footer'
+import { useCart } from "../../../context/cartContext";
 
 const SingleProductPage = () => {
+  const { addToCart } = useCart();
   const { id } = useParams(); // grab the sneaker id from the route
   const sneaker = Sneakers.find((item) => item.id == id);
   // find the sneaker
@@ -17,17 +19,17 @@ const SingleProductPage = () => {
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(0);
 
- const addValue = () => {
-  setQuantity(prev => prev + 1);
-};
+  const addValue = () => {
+    setQuantity(prev => prev + 1);
+  };
 
-const subValue = () => {
-  setQuantity(prev => (prev > 0 ? prev - 1 : 0));
-};
+  const subValue = () => {
+    setQuantity(prev => (prev > 0 ? prev - 1 : 0));
+  };
 
-useEffect(() => {
-  setTotal(sneaker.price * quantity);
-}, [quantity, sneaker.price]);
+  useEffect(() => {
+    setTotal(sneaker.price * quantity);
+  }, [quantity, sneaker.price]);
 
 
   return (
@@ -38,7 +40,7 @@ useEffect(() => {
           <div className="flex gap-x-5">
             <div className="w-full">
               <div>
-                <img src={mainImage} alt={sneaker.name} className="w-full mb-4 rounded-xl  transition-opacity duration-300 "/>
+                <img src={mainImage} alt={sneaker.name} className="w-full mb-4 rounded-xl  transition-opacity duration-300 " />
               </div>
               <div className="flex justify-between">
                 {sneaker.imageThumbnails.map((thumb, id) => (
@@ -46,7 +48,7 @@ useEffect(() => {
                     <img
                       src={thumb}
                       alt={`Thumbnail ${id}`}
-                      className={`w-16 h-16 object-cover rounded-lg cursor-pointer  hover:border-2 ${ mainImage == thumb ? "border-2" : "" }`}
+                      className={`w-16 h-16 object-cover rounded-lg cursor-pointer  hover:border-2 ${mainImage == thumb ? "border-2" : ""}`}
                       onClick={() => setMainImage(thumb)}
                     />
                   </div>
@@ -61,16 +63,24 @@ useEffect(() => {
               <div className="flex justify-between items-center">
                 <div className=" h-8  w-20 flex justify-between font-bold text-sm cursor-pointer gap-x-0.5">
                   <button onClick={subValue} className="bg-gray-300 rounded border border-gray-200 w-10 ">-</button>
-                  <span className="rounded border border-gray-200 flex items-center justify-center w-10">{quantity}</span>
+                  {/* <span className="rounded border border-gray-200 flex items-center justify-center w-10">{quantity}</span> */}
                   <button onClick={addValue} className="bg-gray-300 w-10 rounded border border-gray-200 ">+</button>
                 </div>
                 <div className=" mr-2 bg-amber-400 flex rounded-xl items-center justify-between p-1 gap-x-3 cursor-pointer">
                   <p >
                     Add to cart
                   </p>
-                  <button className="cursor-pointer text-xl relative ">
-                    <FontAwesomeIcon icon={faCartShopping}   className=" text-gray-600"/>
-                     <span className="absolute top-0 left-0 text-sm font-semibold text-green-400 ">{quantity}</span>  
+                  <button
+                    onClick={(id) =>
+                      addToCart({
+                        ...sneaker,
+                        quantity
+                      })
+                    }
+                    className="cursor-pointer text-xl relative"
+                  >
+                    <FontAwesomeIcon icon={faCartShopping} className=" text-gray-600" />
+                    <span className="absolute top-0 left-0 text-sm font-semibold text-green-400 ">{quantity}</span>
                   </button>
                 </div>
               </div>
