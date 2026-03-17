@@ -137,15 +137,15 @@ const signIn = () => {
                 {isLogin ? "Login" : "Create Account"}
               </button>
             </form>
-            <div className='rounded-lg border border-gray-300 shadow-xl py-2  items-center justify-center flex'>
+            <div className='rounded-lg border border-gray-300 shadow-xl p-2  items-center justify-center flex'>
               <FontAwesomeIcon icon={faGoogle} className='text-yellow-500 text-xl ' />
-              <h3 className='text-center ml-5 cursor-pointer'>
+              <h3 className='text-center ml-3 cursor-pointer'>
                 Continue with  Google
               </h3>
             </div>
-            <div className='rounded-lg text-center bg-black text-white shadow-xl pt-2  items-center justify-center flex'>
-              <FontAwesomeIcon icon={faApple} className='text-2xl' />
-              <h3 className='ml-5 cursor-pointer'>
+            <div className='rounded-lg text-center bg-black text-white shadow-xl p-2  items-center justify-center flex'>
+              <FontAwesomeIcon icon={faApple} className='text-xl' />
+              <h3 className='ml-3 cursor-pointer'>
                 Continue with  Apple
               </h3>
             </div>
