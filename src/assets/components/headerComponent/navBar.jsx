@@ -2,25 +2,28 @@ import NavBtns from './navTabs';
 import SneakIcon from '../../images/sneakShop-icon.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser, faMagnifyingGlass, faX } from "@fortawesome/free-solid-svg-icons";
-import { Link,  NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import CartBar from '../cartComponent/addToCart'
 import { useCart } from '../../../context/cartContext';
 import { useState } from 'react';
+import SideDashboard from '../headerComponent/sideDashboard';
 
-const NavBar = () => {
+
+const NavBar = ( ) => {
   const { cartItems } = useCart();
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  const showDashboard = () => {
-    setLoggedIn(true);
-  };
-  const hideDashboard = () => {
-    setLoggedIn(false);
-  };
+  
+ const [loggedIn, setLoggedIn] = useState(false);
+   const showDashboard = () => {
+      setLoggedIn(true);
+    };
+   
+   const hideDashboard = () => {
+      setLoggedIn();
+    };
 
   return (
     <div className='flex justify-between px-20 bg-black/90 min-h-20 max-h-25 w-full'>
-      
+
       <div className='flex items-center'>
         <img src={SneakIcon} alt="" className='w-25 rounded-xl' />
       </div>
@@ -31,10 +34,9 @@ const NavBar = () => {
             key={index}
             to={navBtn.path}
             className={({ isActive }) =>
-              `cursor-pointer font-bold transition ${
-                isActive
-                  ? "border-b-2 border-white text-white"
-                  : "text-gray-400 hover:text-white"
+              `cursor-pointer font-bold transition ${isActive
+                ? "border-b-2 border-white text-white"
+                : "text-gray-400 hover:text-white"
               }`
             }
           >
@@ -54,28 +56,20 @@ const NavBar = () => {
         {/* Pass count to CartBar */}
         <CartBar cartCount={cartItems.length} />
 
-    
-          <button onClick={ () => showDashboard(true)}>
-            <FontAwesomeIcon
-              icon={faCircleUser}
-              className='text-[25px] cursor-pointer hover:text-white transition'
-            />
-          </button>
-      
+
+        <button onClick={() => showDashboard(true)}>
+          <FontAwesomeIcon
+            icon={faCircleUser}
+            className='text-[25px] cursor-pointer hover:text-white transition'
+          />
+        </button>
+
       </div>
       {
         loggedIn && (
-         <div className="absolute top-0 right-0 bg-white p-4 rounded shadow-lg h-screen w-3/12 flex justify-between">
-           <div>
- <p>Welcome Back User</p>
-          <p> You're signed in </p>
-           </div>
-           <FontAwesomeIcon
-              icon={faX}
-              className='text-[25px] cursor-pointer hover:text-gray-500 transition'
-               onClick={() => hideDashboard(true)}
-            />
-         </div>
+          <div >
+          <SideDashboard hideDashboard={hideDashboard} />
+          </div>
         )
       }
     </div>
