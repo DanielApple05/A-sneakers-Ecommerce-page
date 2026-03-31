@@ -1,7 +1,7 @@
 import NavBtns from './navTabs';
 import SneakIcon from '../../images/sneakShop-icon.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleUser, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser, faMagnifyingGlass, faX } from "@fortawesome/free-solid-svg-icons";
 import { Link,  NavLink } from 'react-router-dom';
 import CartBar from '../cartComponent/addToCart'
 import { useCart } from '../../../context/cartContext';
@@ -9,11 +9,13 @@ import { useState } from 'react';
 
 const NavBar = () => {
   const { cartItems } = useCart();
-
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const handleLogin = () => {
+  const showDashboard = () => {
     setLoggedIn(true);
+  };
+  const hideDashboard = () => {
+    setLoggedIn(false);
   };
 
   return (
@@ -53,7 +55,7 @@ const NavBar = () => {
         <CartBar cartCount={cartItems.length} />
 
     
-          <button onClick={handleLogin}>
+          <button onClick={ () => showDashboard(true)}>
             <FontAwesomeIcon
               icon={faCircleUser}
               className='text-[25px] cursor-pointer hover:text-white transition'
@@ -63,9 +65,16 @@ const NavBar = () => {
       </div>
       {
         loggedIn && (
-         <div className="absolute top-0 right-0 bg-white p-4 rounded shadow-lg h-screen w-3/12">
-           <p>Welcome Back User</p>
+         <div className="absolute top-0 right-0 bg-white p-4 rounded shadow-lg h-screen w-3/12 flex justify-between">
+           <div>
+ <p>Welcome Back User</p>
           <p> You're signed in </p>
+           </div>
+           <FontAwesomeIcon
+              icon={faX}
+              className='text-[25px] cursor-pointer hover:text-gray-500 transition'
+               onClick={() => hideDashboard(true)}
+            />
          </div>
         )
       }
