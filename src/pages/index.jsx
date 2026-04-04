@@ -71,7 +71,7 @@ const Index = () => {
               </button>
             </div>
           </div>
-          <div className='w-[50%] relative h-3/4 '>
+          <div className='w-6/12 relative h-3/4 '>
             <img src={Jordans_f} alt="" className="w-full h-full object-cover" />
             <div className="absolute top-5 left-10 font-semibold space-y-1 ">
               <p >
