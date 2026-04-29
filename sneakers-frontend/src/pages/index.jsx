@@ -1,14 +1,33 @@
-import React from 'react';
 import Header from '../assets/components/headerComponent/header';
 import bgHero from '/images/background-hero.png';
 import '../App.css';
 import jordans_2 from '/images/male-imgfolder/male-jordans2.png';
 import Jordans_f from '/images/female-imgfolder/female-airforce.png';
 import Footer from '../assets/components/footerComponent/footer'
-import Sneaker from '../assets/components/sneakerData';
+// import Sneaker from '../assets/components/sneakerData';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const Index = () => {
+  const [sneakers, setSneakers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchSneakers = async () => {
+      setLoading(true);
+      try {
+        const res = await axios.get('http://localhost:5000/api/sneakers');
+        setSneakers(res.data);
+      } catch (error) {
+        console.log('Error fetching sneakers', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSneakers();
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -39,8 +58,10 @@ const Index = () => {
         <h3 className='font-bold'>
           Best Sellers
         </h3>
-        <div className='flex w-full gap-10 mt-4'>
-          {Sneaker.slice(2, 6).map((shoe) => (
+            {loading ? (
+          <p>Loading sneakers...</p>
+        ) : (  <div className='flex w-full gap-10 mt-4'>
+          {sneakers.slice(2, 6).map((shoe) => (
             <div key={shoe.id} className="w-[25%] bg-gray-400 grid rounded-xl text-lg">
               <Link to={`/product/${shoe.id}`}> <div>
                 <img src={shoe.image} alt={shoe.name} className="rounded-t-xl h-full " />
@@ -54,7 +75,8 @@ const Index = () => {
               </button>
             </div>
           ))}
-        </div>
+           </div>
+        )}
         <div className='flex w-full justify-between  my-10 gap-10 h-100'>
           <div className='w-[50%] relative h-3/4 '>
             <img src={jordans_2} alt="" className="w-full h-full object-cover" />

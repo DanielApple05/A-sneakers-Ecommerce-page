@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faUser, faLock, faAnchorLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle, faApple } from '@fortawesome/free-brands-svg-icons';
@@ -16,7 +17,7 @@ const signIn = () => {
   const [errors, setErrors] = useState({});
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     let newErrors = {};
@@ -44,7 +45,24 @@ const signIn = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      navigate('/index')
+      try {
+        if (isLogin){
+           const res = await axios.post( 'http://localhost:5000/api/auth/login', { email, password });
+           localStorage.setItem( 'token', res.data.token );
+           alert(res.data.message);
+          navigate('/index');
+        } else {
+          //SIGNUP
+          const res = await axios.post('http://localhost:5000/api/auth/login', {
+          email,
+          password
+        });
+        alert(res.data.message);
+        setIsLogin(true);
+        }
+      } catch (error) {
+         alert(error.response?.data?.message || 'Something went wrong');
+      }
     }
   };
 
