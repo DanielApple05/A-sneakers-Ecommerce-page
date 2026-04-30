@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const signIn = () => {
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [isLogin, setIsLogin] = useState(false);
   const [fullName, setFullName] = useState("");
@@ -47,13 +48,13 @@ const signIn = () => {
     if (Object.keys(newErrors).length === 0) {
       try {
         if (isLogin){
-           const res = await axios.post( 'http://localhost:5000/api/auth/login', { email, password });
+           const res = await axios.post( `${API_URL}/auth/login`, { email, password });
            localStorage.setItem( 'token', res.data.token );
            alert(res.data.message);
           navigate('/index');
         } else {
           //SIGNUP
-          const res = await axios.post('http://localhost:5000/api/auth/login', {
+          const res = await axios.post(`${API_URL}/auth/signup`, {
           email,
           password
         });
